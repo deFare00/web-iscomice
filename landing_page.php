@@ -723,8 +723,8 @@
                 <br />
               </div>
               <div class="container mb-5">
-                <b>Thematic Discussion #1</b>
-                <p><i>Unlocking a Net Zero Jakarta</i></p>
+                <b>Discussion Session #1</b>
+                <p><i>Exploring Jakarta's Potential as a Leading Business Tourism Destination</i></p>
                 <div
                   class="row pt-4 rounded-top-10 rounded-bottom-10"
                   style="background-color: #ffffff"
@@ -739,19 +739,17 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_31072023120527.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/alan.jpg"
+                              style="height: 130px; object-fit: cover; border: 1px solid black;"
                             />
                           </div>
                           <br />
                           <b class="text-green-old"
-                            >*Coordinating Ministry of Maritime Affairs and
-                            Investment</b
+                            >DR. Iqbal Alan Abdullah, MSC, SMMC</b
                           >
                           <p>
                             <small
-                              >Coordinating Ministry of Maritime Affairs and
-                              Investment</small
+                              >Ketua Umum INCCA</small
                             >
                           </p>
                         </div>
@@ -764,16 +762,16 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023222939.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/andhika-permata.jpg"
+                              style="height: 130px; object-fit: cover; border: 1px solid black;"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Ms. Ririn Rachmawardini</b>
+                          <b class="text-green-old">Andhika Permata</b>
                           <p>
                             <small
-                              >Executive Vice President of Product Development
-                              PT. PLN Indonesia</small
+                              >Kepala Disparekraf DKI Jakarta
+                              </small
                             >
                           </p>
                         </div>
@@ -786,40 +784,15 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023222956.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/Gary-Grimmer.png"
+                              style="height: 130px; object-fit: cover; border: 1px solid black"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Mr. Daud Joseph</b>
+                          <b class="text-green-old">Gary Grimmer</b>
                           <p>
                             <small
-                              >Director of Operations and Safety PT Transportasi
-                              Jakarta</small
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023223011.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old"
-                            >Mr. Tri Wahono Brotosanjoyo</b
-                          >
-                          <p>
-                            <small
-                              >Director of Corporate Affairs of Hyundai Motor
-                              ASEAN HQ</small
+                              >Executive Chairman GainingEdge</small
                             >
                           </p>
                         </div>
@@ -828,23 +801,12 @@
                   </div>
                 </div>
                 <br />
-                <div class="text-right">
-                  <button
-                    class="btn bg-solid-2"
-                    style="position: relative; z-index: 99"
-                    onclick="location.href='#registration'"
-                    type="button"
-                  >
-                    <small class="font-weight-bold">JOIN NOW</small>
-                  </button>
-                </div>
               </div>
               <div class="container mb-5">
-                <b>Thematic Discussion #2</b>
+                <b>Discussion Session #2</b>
                 <p>
                   <i
-                    >Future Global City: Seizing Infrastructure Investment
-                    Opportunities in Jakarta</i
+                    >Strategi Cerdas Untuk Memasarkan Jakarta Sebagai Destinasi Wisata Bisnis Unggulan</i
                   >
                 </p>
                 <div
@@ -861,17 +823,15 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023213545.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/hariyanto.jpeg"
+                              style="height: 130px; object-fit: cover; border: 1px solid black"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Benni Aguscandra</b>
+                          <b class="text-green-old">Hariyanto</b>
                           <p>
                             <small
-                              >Head of Department for Investment and Integrated
-                              One Stop Services, Jakarta Provincial
-                              Government</small
+                              >Deputi Bidang Pengembangan Destinasi dan Infrastruktur</small
                             >
                           </p>
                         </div>
@@ -884,60 +844,15 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023213613.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/Hermawan_Kartajaya.jpg"
+                              style="height: 130px; object-fit: cover; border: 1px solid black"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Charles Kho</b>
+                          <b class="text-green-old">Hermawan Kartajaya S.E, M.B.A</b>
                           <p>
                             <small
-                              >Head of Multinationals and Subsidiary Banking in
-                              PT Bank HSBC Indonesia</small
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023213633.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old">Vivin Harsanto</b>
-                          <p>
-                            <small
-                              >Senior Director, Head of Advisory, Jones Lang
-                              Lasalle (JLL) Indonesia</small
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_25072023213651.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old">Allan Tandiono</b>
-                          <p>
-                            <small
-                              >Project Management & Business Development
-                              Director PT KCIC</small
+                              >Founder & Chairman Markplus</small
                             >
                           </p>
                         </div>
@@ -946,16 +861,6 @@
                   </div>
                 </div>
                 <br />
-                <div class="text-right">
-                  <button
-                    class="btn bg-solid-2"
-                    style="position: relative; z-index: 99"
-                    onclick="location.href='#registration'"
-                    type="button"
-                  >
-                    <small class="font-weight-bold">JOIN NOW</small>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
