@@ -165,29 +165,29 @@ $conn->close();
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
     <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+      <a class="navbar-brand logo" href="../landing_page.php"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto menu">
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#about">About</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">About</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="#registration">Registration</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#venue">Venue</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Venue</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#exhibition">Exhibition</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Exhibition</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#projects">Projects</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Projects</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#rundown">Rundown</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Rundown</a>
           </li>
         </ul>
       </div>
