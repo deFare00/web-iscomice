@@ -482,6 +482,74 @@
 
 -->
 
+  <div class="bg-solid-9">
+    <div id="venue" class="container py-5">
+      <div class="row justify-content-center pt-5">
+        <div class="col-sm-10">
+          <div class="row" style="height: 65px">
+            <div class="col-md-1 col-2 text-left d-flex align-items-end mr-3">
+              <h2 class="title-3 text-dark font-weight-bold">Venue</h2>
+            </div>
+            <div class="col-md-1 col">
+              <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/rectangle.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10 col-12" style="border-top: 1px solid #000000"></div>
+          </div>
+          <!--<div class="row">
+                        <div class="col-sm-6"><hr style="border-bottom:3px solid #24c288;"></hr></div>
+                    </div>-->
+          <div class="row mt-5">
+            <div class="col">
+              <!--<div class="col-12 col-md-3 text-center align-self-center">
+                            <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/jif_black.png" style="height:120px">
+                        </div>-->
+              <!--<div class="col-12 col-md-9 text-justify align-self-center p-4">-->
+              <div class="row">
+                <div class="col-md-3">
+                  <p> </p>
+                </div>
+                <div class="col-md-3">
+                  <p style="text-align: right"> </p>
+                  <p style="text-align: right">
+                    <strong>The St. Regis Jakarta</strong><br />
+                    Rajawali Place, Jl. H. R. Rasuna Said No.4, Kuningan,
+                    Setia Budi<br />
+                    South Jakarta<br />
+                    12910
+                  </p>
+                </div>
+                <div class="col-md-3">
+                  <p>
+                     <iframe style="border: 0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4341057870947!2d106.82531381476906!3d-6.20632919550712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41ace344be7%3A0x7ca9fc55e762b09e!2sThe%20St.%20Regis%20Jakarta!5e0!3m2!1sen!2sid!4v1690386429233!5m2!1sen!2sid" width="300" height="225" allowfullscreen="allowfullscreen"></iframe>
+                  </p>
+                </div>
+                <div class="col-md-3">
+                  <p> </p>
+                </div>
+              </div>
+              <p> </p>
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                     <img class="" style="
+                          display: block;
+                          margin-left: auto;
+                          margin-right: auto;
+                        " src="https://invest.jakarta.go.id/upload/img/speakers/image_03082023082442.jpeg" alt="" width="988" height="645" />
+                  </p>
+                </div>
+              </div>
+              <p> </p>
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--
 <div id="schedule" class="container  py-5 ">
     <div class="row justify-content-center ">
