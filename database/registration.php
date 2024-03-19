@@ -165,7 +165,7 @@ $conn->close();
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
     <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="../assets/LOGO INAMICE HKI 1;1.png" height="40" alt="" /></a>
+      <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto menu">
           <li class="nav-item hover-line active text-capitalize text-lg-center">
@@ -188,9 +188,6 @@ $conn->close();
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="#rundown">Rundown</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
           </li>
         </ul>
       </div>
@@ -363,95 +360,15 @@ $conn->close();
     }, 1000);
   </script>
 
-  <!-- Start Login Form -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title font-weight-bold" id="loginModalLabel">
-            Login
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body px-5">
-          <form id="loginjif" name="loginjif">
-            <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
-            <div class="form-group">
-              <label class="font-weight-bold" for="u">Email</label>
-              <input id="email" type="email" class="form-control" name="username" value="" autocomplete="off" autofocus="" placeholder="" onkeyup="validEmail('email')" />
-              <div class="invalid-feedback">Invalid email</div>
-            </div>
-            <div class="form-group">
-              <label class="font-weight-bold" for="p">Password</label>
-              <input id="password" type="password" class="form-control" name="password" autocomplete="off" placeholder="" />
-            </div>
-            <div class="row mt-4 mb-0 align-items-center">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <button type="submit" value="Login" class="btn bg-solid-2 font-weight-bold px-5">
-                    Login
-                  </button>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group text-md-right">
-                  <a href="#" onclick="reverse()"><u>Forgot password?</u></a>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Login Form -->
-
-  <!-- Start Forgot Password Form -->
-  <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body mb-4">
-          <div class="text-center mb-4">
-            <h5 class="modal-title font-weight-bold" id="loginModalLabel">
-              Forgot Password
-            </h5>
-            Enter your email address
-          </div>
-          <form id="resetjif" name="resetjif">
-            <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
-            <div class="form-group">
-              <input id="email_recovery" type="email" class="form-control py-4" name="email_recovery" autocomplete="off" autofocus="" placeholder="Enter email address" onkeyup="validEmail('email_recovery')" />
-              <div class="invalid-feedback">Invalid email</div>
-            </div>
-            <div class="form-group mt-4 mb-0">
-              <button type="submit" value="Send" class="btn btn-block btn-primary font-weight-bold">
-                Continue
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Forgot Password Form -->
-
-  <div class="modal fade" id="responModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body mb-5">
-          <div id="respon"></div>
+  <div class="container my-5 mt-3">
+    <div class="row">
+      <div class="col">
+        <div class="alert alert-warning p-4">
+          <h4 class="alert-heading custom-text">Pembayaran dapat melalui :</h4>
+          <p class="mb-0 custom-text">Bank BCA Digital 007189959247 - Fitriyani Oktiana</p>
+          <br>
+          <h4 class="alert-heading">Perhatian!</h4>
+          <p>Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%.</p>
         </div>
       </div>
     </div>
@@ -478,7 +395,7 @@ $conn->close();
             <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/batik.png" />
           </div>
           <div class="col-sm-6 col-md-6">
-            <div class="py-3 text-grey">
+            <div class="py-4 text-grey">
               Fill in the registration data. It will take a couple of minutes.
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
@@ -653,7 +570,6 @@ $conn->close();
     </div>
   </div>
   <!-- End Registration Form -->
-
 
   <div class="jumbotron m-0 footer-text bg-solid-2 rounded-0 py-0">
     <div class="container py-4">
