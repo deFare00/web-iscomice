@@ -175,7 +175,7 @@ $conn->close();
             <a class="nav-link px-md-3" href="#registration">Registration</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Venue</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">Schedule</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
@@ -365,10 +365,10 @@ $conn->close();
       <div class="col">
         <div class="alert alert-warning p-4">
           <h4 class="alert-heading custom-text">Pembayaran dapat melalui :</h4>
-          <p class="mb-0 custom-text">Bank BCA Digital 007189959247 - Fitriyani Oktiana</p>
+          <p class="mb-0 custom-text"><strong>Bank BCA Digital 007189959247 - Fitriyani Oktiana</strong></p>
           <br>
-          <h4 class="alert-heading">Perhatian!</h4>
-          <p>Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%.</p>
+          <h4 class="alert-heading"><strong>Perhatian!</strong></h4>
+          <p><strong>Pembatalan registrasi pada H-7</strong> acara maka dana akan <strong>dikembalikan sebesar 25%</strong></p>
         </div>
       </div>
     </div>
