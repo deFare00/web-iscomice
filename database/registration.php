@@ -376,7 +376,7 @@ $conn->close();
 
   <!-- Start Registration Form -->
   <div id="registration" class="container py-5 clearfix">
-    <div class="row justify-content-center pt-5">
+    <div class="row justify-content-center">
       <div class="col-sm-10">
         <div class="row" style="height: 65px">
           <div class="col-xs-4 col-md-2 col-2 text-left d-flex align-items-end mr-3">
