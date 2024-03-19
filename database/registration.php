@@ -395,7 +395,7 @@ $conn->close();
             <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/batik.png" />
           </div>
           <div class="col-sm-6 col-md-6">
-            <div class="py-4 text-grey">
+            <div class="py-4 text-black">
               Fill in the registration data. It will take a couple of minutes.
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
