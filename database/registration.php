@@ -3,6 +3,7 @@ include 'connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil nilai dari formulir
+    $delegatesType = $_POST['delegates_type'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $phoneNumber = $_POST['hp'];
@@ -42,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paymentProofPath = isset($uploadFile) ? $uploadFile : '';
 
     // Query SQL untuk menyimpan data ke dalam tabel
-    $sql = "INSERT INTO registration_user (firstName, lastName, hp, mail, pwd, repassword, bidang, sectors, payment_proof) 
-            VALUES ('$firstName', '$lastName', '$phoneNumber', '$email', '$hashedPassword', '$confirmPassword', '$company', '$businessSector', '$paymentProofPath')";
+    $sql = "INSERT INTO registration_user (delegates_type, firstName, lastName, hp, mail, pwd, repassword, bidang, sectors, payment_proof) 
+            VALUES ('$delegatesType', '$firstName', '$lastName', '$phoneNumber', '$email', '$hashedPassword', '$confirmPassword', '$company', '$businessSector', '$paymentProofPath')";
 
     // Jalankan query dan periksa apakah berhasil
     if ($conn->query($sql) === TRUE) {
@@ -691,6 +692,28 @@ $conn->close();
                 Fill in the registration data. It will take a couple of minutes.
               </div>
               <form id="registrasi" name="registrasi" method="post" action="registration.php">
+              <div class="form-row">
+                  <div class="form-group col">
+                    <label class="font-weight-bold" for="inputEmail4"
+                      >Delegates Type</label
+                    >
+                    <select
+                      id="delegates_type"
+                      name="delegates_type"
+                      class="form-control text-truncate"
+                    >
+                      <option value="" disabled selected hidden="">
+                        Select Delegates Type
+                      </option>
+                      <option class="text-truncate">
+                        Online Delegates
+                      </option>
+                      <option class="text-truncate">
+                        Offline Delegates
+                      </option>
+                    </select>
+                  </div>
+                </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label class="font-weight-bold">First Name</label>
