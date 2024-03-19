@@ -360,7 +360,7 @@ $conn->close();
     }, 1000);
   </script>
 
-  <div class="container my-5 mt-3">
+  <div class="container py-5 mt-3">
     <div class="row">
       <div class="col">
         <div class="alert alert-warning p-4">
