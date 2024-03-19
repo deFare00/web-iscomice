@@ -204,7 +204,7 @@
         <a
           class="navbar-brand logo" href="#top"
           ><img
-            src="assets/LOGO INAMICE HKI 1;1.png"
+            src="assets/IMG_5581.PNG"
             height="40"
             alt=""
         /></a>
@@ -624,28 +624,22 @@
               style="border-top: 1px solid #000000"
             ></div>
           </div>
-          <!--<div class="row">
-                <div class="col-sm-6"><hr style="border-bottom:3px solid #24c288;"></hr></div>
-            </div>-->
           <div class="row mt-5">
             <div class="col">
-              <!--<div class="col-12 col-md-3 text-center align-self-center">
-                    <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/jif_black.png" style="height:120px">
-                </div>-->
-              <!--<div class="col-12 col-md-9 text-justify align-self-center p-4">-->
-              <p><strong>Jakarta Investment Forum</strong></p>
-              <p><strong>Global City and Beyond</strong></p>
+            <p><strong>History of INAMICE</strong></p>
               <p>
-                Jakarta Investment Forum is an international annual forum to
-                promote and showcase business opportunities in Jakarta Capital
-                City. Inviting policymakers, private sectors, business leaders
-                and experts, this event also provides a platform to discuss
-                global investment trends and challenges.
+              INAMICE adalah official brand convention yang diusung pertama kali oleh Ibu Christina L. Rudatin, Ketua Forum Program Studi (FPS) MICE Yang sekaligus dosen MICE Politeknik Negeri Jakarta.
               </p>
               <p>
-                Don't miss the updates, click to follow us on instagram:
-                @jakartainvestmentforum<br />
-                Please REGISTER and LOG IN first to join the sessions!
+              Sukses diselenggarakan oleh mahasiswa MICE PNJ angkatan 2011, INAMICE menjadi acara yang wajib dua tahun sekali dengan tema dan topik yang berbeda.
+              </p>
+              <p>
+              Bekerjasama dengan Forum Program Studi (FPS) MICE Indonesia, Indonesia Congress and Convention Association (INCCA) dan Lembaga Sertifikasi Profesi (LSP) MICE, Politeknik Negeri Jakarta telah menyelenggarakan sebuah konvensi nasional yang ikut andil menjadi penentu masa depan sumber daya manusia negara Indonesia yang bergerak di bidang MICE dalam menghadapi masyarakat ekonomi ASEAN.
+              </p>
+
+              <p><strong>About INAMICE 2024</strong></p>
+              <p>
+              INAMICE merupakan kegiatan yang diagendakan secara rutin dan dilaksanakan oleh Politeknik Negeri Jakarta sebagai sebuah forum pertemuan antara dunia industri, akademisi, pemerintah, dan berbagai lingkup stakeholder Industri MICE untuk membahas isu-isu aktual ataupun perkembangan industri MICE ditiap tahunnya. INAMICE telah diselenggarakan sejak tahun 2014 dan di tahun 2024 ini merupakan penyelenggaraan ke-7 dengan tema besar membahas mengenai reposisi Jakarta.
               </p>
               <!--</div>-->
             </div>
@@ -680,8 +674,7 @@
           <div class="row mt-5">
             <div class="col-12 col-md-12 text-justify align-self-center">
               <div class="container mb-5">
-                <b>Jakarta Investment Forum - Plenary Discussion</b>
-                <p><i>Global City and Beyond</i></p>
+              <b>Keynote Speakers</b>
                 <div
                   class="row pt-4 rounded-top-10 rounded-bottom-10"
                   style="background-color: #ffffff"
@@ -696,13 +689,13 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_27072023011138.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/sandiaga_uno.png"
+                              style="height: 130px; object-fit: cover ;border:1px solid black;"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Mr. Heru Budi Hartono</b>
-                          <p><small>Acting Governor of Jakarta</small></p>
+                          <b class="text-green-old">Sandiaga Uno</b>
+                          <p><small>Minister of Tourism and Creative Economy of the Republic of Indonesia</small></p>
                         </div>
                       </div>
                       <div class="px-2 mb-4">
@@ -713,80 +706,14 @@
                           >
                             <img
                               class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_31072023115931.jpg"
-                              style="height: 130px; object-fit: cover"
+                              src="assets/perry.jpg"
+                              style="height: 130px; object-fit: cover; border: 1px solid black;"
                             />
                           </div>
                           <br />
-                          <b class="text-green-old">Mr. Dicky Kartikoyono</b>
+                          <b class="text-green-old">Perry Warjiyo</b>
                           <p>
-                            <small>Assistant Governor of Bank Indonesia</small>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_31072023115455.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old">Himawan Hariyoga</b>
-                          <p>
-                            <small
-                              >Deputy Minister for Regional Development,
-                              Ministry of National Development
-                              Planning/Bappenas</small
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_28072023112528.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old">Mrs. Sri Haryati</b>
-                          <p>
-                            <small
-                              >Assistant to the Provincial Secretary for
-                              Economic and Finance</small
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="px-2 mb-4">
-                        <div style="height: 300px" class="grayscale">
-                          <div
-                            class="mx-auto"
-                            style="width: 130px; height: 130px"
-                          >
-                            <img
-                              class="rounded-circle"
-                              src="https://invest.jakarta.go.id/upload/img/speakers/image_28072023111206.jpg"
-                              style="height: 130px; object-fit: cover"
-                            />
-                          </div>
-                          <br />
-                          <b class="text-green-old">Mr. Budi Karya Sumadi</b>
-                          <p>
-                            <small
-                              >Minister of Transportation of Indonesia</small
-                            >
+                            <small>Governor of Bank Indonesia</small>
                           </p>
                         </div>
                       </div>
@@ -794,16 +721,6 @@
                   </div>
                 </div>
                 <br />
-                <div class="text-right">
-                  <button
-                    class="btn bg-solid-2"
-                    style="position: relative; z-index: 99"
-                    onclick="location.href='#registration'"
-                    type="button"
-                  >
-                    <small class="font-weight-bold">JOIN NOW</small>
-                  </button>
-                </div>
               </div>
               <div class="container mb-5">
                 <b>Thematic Discussion #1</b>
