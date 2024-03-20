@@ -592,7 +592,7 @@
               <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
               <div class="form-group row">
                 <div class="col-sm-10 text-left">
-                  <small>Do not miss Jakarta's latest business and investment
+                  <small>Do not miss our latest business
                     opportunity updates.</small>
                 </div>
               </div>
@@ -630,9 +630,9 @@
         </div>
         <hr class="bg-solid-8" />
         <div>
-          <small>© Jakarta Investment Centre 2023<br />
-            Jl. HR. Rasuna Said Kav. C22, Jakarta Selatan, DKI Jakarta
-            12940</small>
+          <small>© Indonesia Mice Conference And Exhibition 2024<br />
+          Jl. TB Simatupang No.30, Cilandak Bar., Kec.
+          Cilandak, Kota Jakarta Selatan, 12430</small>
         </div>
       </footer>
     </div>
