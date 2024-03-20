@@ -117,15 +117,6 @@
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="#speakers">Speakers</a>
           </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#exhibition">Exhibition</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#rundown">Rundown</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -556,22 +547,7 @@
           <div class="row justify-content-center">
             <div class="col justify-content-center d-flex align-items-center">
               <div class="d-flex align-items-center p-4">
-                <img src="https://invest.jakarta.go.id/upload/img/sponsor/image_29072022022747.png" style="max-height: 100px; object-fit: contain" />
-              </div>
-            </div>
-            <div class="col justify-content-center d-flex align-items-center">
-              <div class="d-flex align-items-center p-4">
-                <img src="https://invest.jakarta.go.id/upload/img/sponsor/image_29072022031036.png" style="max-height: 100px; object-fit: contain" />
-              </div>
-            </div>
-            <div class="col justify-content-center d-flex align-items-center">
-              <div class="d-flex align-items-center p-4">
-                <img src="https://invest.jakarta.go.id/upload/img/sponsor/image_29072022031400.png" style="max-height: 100px; object-fit: contain" />
-              </div>
-            </div>
-            <div class="col justify-content-center d-flex align-items-center">
-              <div class="d-flex align-items-center p-4">
-                <img src="https://invest.jakarta.go.id/upload/img/sponsor/image_29072022031435.png" style="max-height: 100px; object-fit: contain" />
+                <img src="assets/all_sponsor.png" style="max-height: 500px; object-fit: contain" />
               </div>
             </div>
           </div>
