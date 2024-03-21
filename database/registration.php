@@ -180,15 +180,6 @@ $conn->close();
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
           </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Exhibition</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Projects</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Rundown</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -576,66 +567,48 @@ $conn->close();
       <footer>
         <div class="row justify-content-center">
           <div class="col-12 text-left py-4">
-            <a class="navbar-brand footer" href="https://invest.jakarta.go.id"><img src="https://invest.jakarta.go.id/front/img/logo/support.png" height="50px" alt="" /></a>
-            <a class="navbar-brand footer" href="https://invest.jakarta.go.id"><img src="https://invest.jakarta.go.id/front/img/jif/logo.png" height="40px" alt="" /></a>
+            <a class="navbar-brand footer"><img src="../assets/IMG_5581.PNG" height="150px" alt="" /></a>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-sm-2 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
-              JIF Plenary
+              INAMICE 2024
             </div>
             <div class="py-1">
-              <small><a class="" href="https://invest.jakarta.go.id/jakarta-investment-forum">
-                  Overview</a></small>
-            </div>
-            <div class="py-1">
-              <small><a class="" href="#venue">Venue</a></small>
+              <small><a class="" href="#about">
+                  About</a></small>
             </div>
             <div class="py-1">
               <small><a class="" href="#speakers">Speakers</a></small>
             </div>
             <div class="py-1">
-              <small><a class="" href="#thematic">Thematic</a></small>
-            </div>
-            <div class="py-1">
-              <small><a class="" href="#infrastructures">Infrastructures</a></small>
-            </div>
-            <div class="py-1">
-              <small><a class="" href="#achievements">Achievements</a></small>
+              <small><a class="" href="#schedule">Schedule</a></small>
             </div>
           </div>
           <div class="col-12 col-sm-2 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
-              JIF Exhibition
+              Register
             </div>
             <div class="py-1">
-              <small><a class="" href="#exhibition1">Exhibition #1</a></small>
+              <small><a class="" href="#exhibition1">How to Register</a></small>
             </div>
             <div class="py-1">
-              <small><a class="" href="#exhibition2">Exhibition #2</a></small>
+              <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>
+            </div>
+            <div class="py-1">
+              <small><a class="" href="#exhibition2">CHSE</a></small>
+            </div>
+            <div class="py-1">
+              <small><a class="" href="#exhibition2">Cancellation</a></small>
             </div>
           </div>
           <div class="col-12 col-sm-2 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
-              Investment Guides
-            </div>
-            <div class="py-1">
-              <small><a class="" href="#booklet">Project Booklet</a></small>
-            </div>
-            <div class="py-1">
-              <small><a class="" href="#projects">Project List</a></small>
             </div>
           </div>
           <div class="col-12 col-sm-3 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
-              Jakarta Investment Centre
-            </div>
-            <div class="py-1">
-              <small><a class="" href="/jic">About JIC</a></small>
-            </div>
-            <div class="py-1">
-              <small><a class="" href="/publication-news-events">Publication</a></small>
             </div>
           </div>
           <div class="col-12 col-sm-3 text-left align-self-center mt-5 mt-sm-0">
@@ -643,7 +616,7 @@ $conn->close();
               <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
               <div class="form-group row">
                 <div class="col-sm-10 text-left">
-                  <small>Do not miss Jakarta's latest business and investment
+                  <small>Do not miss our latest business
                     opportunity updates.</small>
                 </div>
               </div>
@@ -652,7 +625,7 @@ $conn->close();
                 <div class="invalid-feedback text-white">Invalid email</div>
                 <div class="input-group-append">
                   <button type="submit" class="btn sosmed text-white btn-subscribe">
-                    Subscribe
+                    Submit
                   </button>
                 </div>
               </div>
@@ -661,30 +634,29 @@ $conn->close();
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-sm-6 text-left text-sm-right align-self-center">
-            <div class="font-weight-bold py-3">Careers</div>
           </div>
           <div class="col-12 col-sm-2 text-left text-sm-right align-self-center">
             <div class="font-weight-bold py-3">
-              <a href="contact-us">Contact Us</a>
+              <a>Contact Us</a>
             </div>
           </div>
           <div class="col-12 col-sm-4 text-center py-3">
-            <a target="_blank" href="https://www.facebook.com/jakartainvestmentcentre"><span class="fa-stack fa-lg sosmed"> </span></a>
+            <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
              
-            <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed"> </span></a>
+            <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
              
             <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
-              <span class="fa-stack fa-lg sosmed"> </span></a>
+              <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
              
-            <a target="_blank" href="https://www.instagram.com/jic.jakarta/"><span class="fa-stack fa-lg sosmed"> </span></a>
+            <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.png'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
              
           </div>
         </div>
         <hr class="bg-solid-8" />
         <div>
-          <small>© Jakarta Investment Centre 2023<br />
-            Jl. HR. Rasuna Said Kav. C22, Jakarta Selatan, DKI Jakarta
-            12940</small>
+          <small>© Indonesia Mice Conference And Exhibition 2024<br />
+          Jl. TB Simatupang No.30, Cilandak Bar., Kec.
+          Cilandak, Kota Jakarta Selatan, 12430</small>
         </div>
       </footer>
     </div>
