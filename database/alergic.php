@@ -360,7 +360,7 @@ $conn->close();
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-md-6 d-flex align-items-center py-3">
-                        <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/batik.png" />
+                        <img class="img-fluid" src="assets/elements/iconBurung.png" />
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="py-4 text-black">
