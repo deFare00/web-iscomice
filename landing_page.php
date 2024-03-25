@@ -486,14 +486,12 @@
                   <div class="col-md-3">  
                   </div>
                   <div class="col-md-3">
-                    <p> </p>
                   </div>
                 </div>
-                <p> </p>
                 <div class="row">
-                  <div class="col-md-12">
-                    <p>
-                       <img
+                  <div class="col-md-10">
+          
+                      <img
                         class=""
                         style="
                           display: block;
@@ -501,13 +499,11 @@
                           margin-right: auto;
                           object-fit: cover;
                         "
-                        src="assets/rundown.png"
+                        src="assets/Rundown INAMICE.jpg"
                         alt=""
                       />
-                    </p>
                   </div>
                 </div>
-                <p> </p>
                 <!--</div>-->
               </div>
             </div>
