@@ -3,18 +3,17 @@ include 'connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Ambil nilai dari formulir
-  $delegatesType = $_POST['delegates_type'];
-  $firstName = $_POST['firstName'];
-  $lastName = $_POST['lastName'];
+  $fullName = $_POST['nama_lengkap'];
   $gender = $_POST['gender'];
   $phoneNumber = $_POST['hp'];
   $email = $_POST['mail'];
-  $company = $_POST['bidang'];
-  $businessSector = $_POST['sectors'];
+  $alamat = $_POST['alamat'];
+  $pekerjaan = $_POST['pekerjaan'];
+  $namaOrganisasi = $_POST['nama_organisasi'];
 
   // Query SQL untuk menyimpan data ke dalam tabel
-  $sql = "INSERT INTO registration_user (delegates_type, firstName, lastName, gender, hp, mail, bidang, sectors) 
-            VALUES ('$delegatesType', '$firstName', '$lastName', '$gender', '$phoneNumber', '$email', '$company', '$businessSector')";
+  $sql = "INSERT INTO registration_user (nama_lengkap, gender, hp, mail, alamat, pekerjaan, nama_organisasi) 
+            VALUES ('$fullName', '$gender', '$phoneNumber', '$email', '$alamat', '$pekerjaan', '$namaOrganisasi')";
 
   // Jalankan query dan periksa apakah berhasil
   if ($conn->query($sql) === TRUE) {
@@ -364,30 +363,10 @@ $conn->close();
               Fill in the registration data. It will take a couple of minutes.
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
-              <div class="form-row">
+            <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold" for="inputEmail4">Delegates Type</label>
-                  <select id="delegates_type" name="delegates_type" class="form-control text-truncate">
-                    <option value="" disabled selected hidden="">
-                      Select Delegates Type
-                    </option>
-                    <option class="text-truncate">
-                      Online Delegates
-                    </option>
-                    <option class="text-truncate">
-                      Offline Delegates
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label class="font-weight-bold">First Name</label>
-                  <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" />
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="font-weight-bold" for="inputPassword4">Last Name</label>
-                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" />
+                  <label class="font-weight-bold">Full Name</label>
+                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" />
                 </div>
               </div>
               <div class="form-row">
@@ -414,102 +393,27 @@ $conn->close();
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Email Address</label>
+                  <label class="font-weight-bold">Email</label>
                   <input type="email" class="form-control" id="mail" name="mail" placeholder="" />
                   <div class="invalid-feedback">Invalid email</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Company</label>
-                  <input type="text" class="form-control" id="bidang" name="bidang" placeholder="" autocomplete="off" />
+                  <label class="font-weight-bold">Address</label>
+                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold" for="inputEmail4">Business Sectors</label>
-                  <select id="sectors" name="sectors" class="form-control text-truncate">
-                    <option value="" disabled selected hidden="">
-                      Select Business Sectors
-                    </option>
-                    <option class="text-truncate" value="13">
-                      Chemical and Pharmaceutical Industry
-                    </option>
-                    <option class="text-truncate" value="9">
-                      Construction
-                    </option>
-                    <option class="text-truncate" value="10">
-                      Electricity, Gas, and Water Supply
-                    </option>
-                    <option class="text-truncate" value="19">Fishery</option>
-                    <option class="text-truncate" value="25">
-                      Food Crops, Plantations, and Livestock
-                    </option>
-                    <option class="text-truncate" value="29">
-                      Food Industry
-                    </option>
-                    <option class="text-truncate" value="28">Forestry</option>
-                    <option class="text-truncate" value="8">
-                      Hotel and Restaurant
-                    </option>
-                    <option class="text-truncate" value="5">
-                      Housing, Industrial Estate, and Office Building
-                    </option>
-                    <option class="text-truncate" value="11">
-                      Leather Goods and Footwear Industry
-                    </option>
-                    <option class="text-truncate" value="14">
-                      Machinery, Electronic, Medical Instrument, Precision,
-                      Optical, and Watch Industry
-                    </option>
-                    <option class="text-truncate" value="31">
-                      Medical Preci. & Optical Instru, Watches & Clock,
-                      Machinary, and Electronic Industry
-                    </option>
-                    <option class="text-truncate" value="27">
-                      Metal, Except Machinery and Equipment Industry
-                    </option>
-                    <option class="text-truncate" value="33">
-                      Metal Industry not Machinery & Electronic Industry
-                    </option>
-                    <option class="text-truncate" value="12">Mining</option>
-                    <option class="text-truncate" value="32">
-                      Motor Vehicles & Other Transport Equip. Industry
-                    </option>
-                    <option class="text-truncate" value="24">
-                      Non-Metallic Mineral Industry
-                    </option>
-                    <option class="text-truncate" value="15">
-                      Other Industries
-                    </option>
-                    <option class="text-truncate" value="6">
-                      Other Services
-                    </option>
-                    <option class="text-truncate" value="16">
-                      Paper and Printing Industry
-                    </option>
-                    <option class="text-truncate" value="30">
-                      Real Estate, Ind. Estate & Business Activities
-                    </option>
-                    <option class="text-truncate" value="18">
-                      Rubber and Plastic Based Goods Industry
-                    </option>
-                    <option class="text-truncate" value="23">
-                      Textile Industry
-                    </option>
-                    <option class="text-truncate" value="7">
-                      Trade and Reparation
-                    </option>
-                    <option class="text-truncate" value="4">
-                      Transportation, Warehouse, and Telecommunication
-                    </option>
-                    <option class="text-truncate" value="22">
-                      Vehicle and Other Transportation Industry
-                    </option>
-                    <option class="text-truncate" value="26">
-                      Wood Industry
-                    </option>
-                  </select>
+                  <label class="font-weight-bold">Job</label>
+                  <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" placeholder="" autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <label class="font-weight-bold">Organization/Company/Institution</label>
+                  <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" placeholder="" autocomplete="off" />
                 </div>
               </div>
               <div class="form-row">
