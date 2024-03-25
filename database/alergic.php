@@ -351,7 +351,7 @@ $conn->close();
                         <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
                     </div>
                     <div class="col-md-1 col">
-                        <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/rectangle.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+                        <img class="img-fluid" src="assets/elements/iconBurung.png" style="border-radius: 8px 0 8px 0; width: 30px" />
                     </div>
                 </div>
                 <div class="row">
