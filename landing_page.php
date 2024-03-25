@@ -283,7 +283,7 @@
             <h2 class="title-3 text-dark font-weight-bold">About</h2>
           </div>
           <div class="col-md-1 col">
-            <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/rectangle.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+            <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
           </div>
         </div>
         <div class="row">
@@ -321,7 +321,7 @@
             <h2 class="title-3 text-dark font-weight-bold">Speakers</h2>
           </div>
           <div class="col-md-1 col pl-0">
-            <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/rectangle.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+          <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
           </div>
         </div>
         <div class="row">
@@ -465,11 +465,7 @@
                 <h2 class="title-3 text-dark font-weight-bold">Schedule</h2>
               </div>
               <div class="col-md-1 col pl-0">
-                <img
-                  class="img-fluid"
-                  src="https://invest.jakarta.go.id/front/img/jif/rectangle.png"
-                  style="border-radius: 8px 0 8px 0; width: 30px"
-                />
+              <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
               </div>
             </div>
             <div class="row">
@@ -631,8 +627,7 @@
         <hr class="bg-solid-8" />
         <div>
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
-          Jl. TB Simatupang No.30, Cilandak Bar., Kec.
-          Cilandak, Kota Jakarta Selatan, 12430</small>
+          Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>
       </footer>
     </div>
