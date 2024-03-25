@@ -2,51 +2,51 @@
 include 'connection.php';
 
 // Periksa apakah user_id telah diterima dari URL
-if(isset($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
+if (isset($_GET['user_id'])) {
+  $user_id = $_GET['user_id'];
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Ambil nilai dari formulir
-        $paymentMethod = $_POST['payment_method'];
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil nilai dari formulir
+    $paymentMethod = $_POST['payment_method'];
 
-        // Periksa apakah file gambar telah diunggah
-        if (isset($_FILES['payment_proof']) && $_FILES['payment_proof']['error'] === UPLOAD_ERR_OK) {
-            // Direktori tempat Anda ingin menyimpan file gambar
-            $uploadDir = '../uploads/';
+    // Periksa apakah file gambar telah diunggah
+    if (isset($_FILES['payment_proof']) && $_FILES['payment_proof']['error'] === UPLOAD_ERR_OK) {
+      // Direktori tempat Anda ingin menyimpan file gambar
+      $uploadDir = '../uploads/';
 
-            // Mendapatkan informasi tentang file yang diunggah
-            $fileName = $_FILES['payment_proof']['name'];
-            $fileTempName = $_FILES['payment_proof']['tmp_name'];
-            $uploadFile = $uploadDir . basename($fileName);
+      // Mendapatkan informasi tentang file yang diunggah
+      $fileName = $_FILES['payment_proof']['name'];
+      $fileTempName = $_FILES['payment_proof']['tmp_name'];
+      $uploadFile = $uploadDir . basename($fileName);
 
-            // Pindahkan file yang diunggah ke direktori yang ditentukan
-            if (move_uploaded_file($fileTempName, $uploadFile)) {
-                echo "File berhasil diunggah.";
+      // Pindahkan file yang diunggah ke direktori yang ditentukan
+      if (move_uploaded_file($fileTempName, $uploadFile)) {
+        echo "File berhasil diunggah.";
 
-                // Path file gambar untuk disimpan dalam database
-                $paymentProofPath = $uploadFile;
+        // Path file gambar untuk disimpan dalam database
+        $paymentProofPath = $uploadFile;
 
-                // Query SQL untuk menyimpan data ke dalam tabel
-                $sql = "INSERT INTO payment (user_id, payment_method, payment_proof) 
+        // Query SQL untuk menyimpan data ke dalam tabel
+        $sql = "INSERT INTO payment (user_id, payment_method, payment_proof) 
                         VALUES ('$user_id', '$paymentMethod', '$paymentProofPath')";
 
-                // Jalankan query dan periksa apakah berhasil
-                if ($conn->query($sql) === TRUE) {
-                    // Redirect ke halaman lain setelah formulir disubmit
-                    header("Location: registration.php"); // Ganti "sukses.php" dengan halaman tujuan
-                    exit; // Pastikan tidak ada output lain sebelum redirect
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }
-            } else {
-                echo "Error: Gagal mengunggah file.";
-            }
+        // Jalankan query dan periksa apakah berhasil
+        if ($conn->query($sql) === TRUE) {
+          // Redirect ke halaman lain setelah formulir disubmit
+          header("Location: registration.php"); // Ganti "sukses.php" dengan halaman tujuan
+          exit; // Pastikan tidak ada output lain sebelum redirect
         } else {
-            echo "Error: Tidak ada file yang diunggah atau terjadi kesalahan.";
+          echo "Error: " . $sql . "<br>" . $conn->error;
         }
+      } else {
+        echo "Error: Gagal mengunggah file.";
+      }
+    } else {
+      echo "Error: Tidak ada file yang diunggah atau terjadi kesalahan.";
     }
+  }
 } else {
-    echo "Error: user_id not found in URL.";
+  echo "Error: user_id not found in URL.";
 }
 
 // Tutup koneksi ke database
@@ -347,12 +347,12 @@ $conn->close();
   <div class="container py-5 mt-5">
     <div class="row">
       <div class="col">
-        <div class="alert alert-warning p-4">
-          <h4 class="alert-heading custom-text">Pembayaran dapat melalui :</h4>
-          <p class="mb-0 custom-text"><strong>Bank BCA Digital 007189959247 - Fitriyani Oktiana</strong></p>
+        <div style="background-color: #08145A;" class="p-4">
+          <h4 style="color: #F7F7EF;" class="heading custom-text">Pembayaran dapat melalui :</h4>
+          <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
           <br>
-          <h4 class="alert-heading"><strong>Perhatian!</strong></h4>
-          <p><strong>Pembatalan registrasi pada H-7</strong> acara maka dana akan <strong>dikembalikan sebesar 25%</strong></p>
+          <h4 style="color: #F7F7EF;" class="alert-heading">Perhatian!</h4>
+          <p style="color: #F7F7EF;">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
         </div>
       </div>
     </div>
@@ -367,7 +367,7 @@ $conn->close();
             <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
           </div>
           <div class="col-md-1 col">
-            <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/rectangle.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+            <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
           </div>
         </div>
         <div class="row">
@@ -376,7 +376,7 @@ $conn->close();
         </div>
         <div class="row">
           <div class="col-sm-6 col-md-6 d-flex align-items-center py-3">
-            <img class="img-fluid" src="https://invest.jakarta.go.id/front/img/jif/batik.png" />
+            <img class="img-fluid mb-4" src="../assets/elements/iconBurung.png" style="width: 500px; height: 750px; object-fit: cover;" />
           </div>
           <div class="col-sm-6 col-md-6">
             <div class="py-4 text-black">
@@ -513,8 +513,7 @@ $conn->close();
         <hr class="bg-solid-8" />
         <div>
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
-          Jl. TB Simatupang No.30, Cilandak Bar., Kec.
-          Cilandak, Kota Jakarta Selatan, 12430</small>
+          Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>
       </footer>
     </div>

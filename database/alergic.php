@@ -2,7 +2,7 @@
 include 'connection.php';
 
 // Periksa apakah user_id telah diterima dari URL
-if(isset($_GET['user_id'])) {
+if (isset($_GET['user_id'])) {
     $user_id = $_GET['user_id'];
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -331,12 +331,12 @@ $conn->close();
     <div class="container py-5 mt-5">
         <div class="row">
             <div class="col">
-                <div class="alert alert-warning p-4">
-                    <h4 class="alert-heading custom-text">Pembayaran dapat melalui :</h4>
-                    <p class="mb-0 custom-text"><strong>Bank BCA Digital 007189959247 - Fitriyani Oktiana</strong></p>
+                <div style="background-color: #08145A;" class="p-4">
+                    <h4 style="color: #F7F7EF;" class="heading custom-text">Pembayaran dapat melalui :</h4>
+                    <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
                     <br>
-                    <h4 class="alert-heading"><strong>Perhatian!</strong></h4>
-                    <p><strong>Pembatalan registrasi pada H-7</strong> acara maka dana akan <strong>dikembalikan sebesar 25%</strong></p>
+                    <h4 style="color: #F7F7EF;" class="alert-heading">Perhatian!</h4>
+                    <p style="color: #F7F7EF;">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
                 </div>
             </div>
         </div>
@@ -351,7 +351,7 @@ $conn->close();
                         <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
                     </div>
                     <div class="col-md-1 col">
-                        <img class="img-fluid" src="assets/elements/iconBurung.png" style="border-radius: 8px 0 8px 0; width: 30px" />
+                        <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
                     </div>
                 </div>
                 <div class="row">
@@ -360,7 +360,7 @@ $conn->close();
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-md-6 d-flex align-items-center py-3">
-                        <img class="img-fluid" src="assets/elements/iconBurung.png" />
+                        <img class="img-fluid mb-4" src="../assets/elements/iconBurung.png" style="width: 500px; height: 750px; object-fit: cover;" />
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="py-4 text-black">
@@ -544,8 +544,7 @@ $conn->close();
                 <hr class="bg-solid-8" />
                 <div>
                     <small>© Indonesia Mice Conference And Exhibition 2024<br />
-                        Jl. TB Simatupang No.30, Cilandak Bar., Kec.
-                        Cilandak, Kota Jakarta Selatan, 12430</small>
+                    Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
                 </div>
             </footer>
         </div>
