@@ -283,7 +283,7 @@
             <h2 class="title-3 text-dark font-weight-bold">About</h2>
           </div>
           <div class="col-md-1 col">
-            <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
+            <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
           </div>
         </div>
         <div class="row">
@@ -321,7 +321,7 @@
             <h2 class="title-3 text-dark font-weight-bold">Speakers</h2>
           </div>
           <div class="col-md-1 col pl-0">
-          <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
+          <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
           </div>
         </div>
         <div class="row">
@@ -465,7 +465,7 @@
                 <h2 class="title-3 text-dark font-weight-bold">Schedule</h2>
               </div>
               <div class="col-md-1 col pl-0">
-              <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
+              <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets -->
               </div>
             </div>
             <div class="row">
