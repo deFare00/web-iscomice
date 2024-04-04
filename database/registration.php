@@ -340,11 +340,11 @@ $conn->close();
     <div class="row">
       <div class="col">
         <div style="background-color: #08145A;" class="p-4">
-          <h4 style="color: #F7F7EF;" class="heading custom-text">Pembayaran dapat melalui :</h4>
+          <h4 style="color: #F7F7EF;" class="heading custom-text" id="paymentTitle">Pembayaran dapat melalui :</h4>
           <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
           <br>
-          <h4 style="color: #F7F7EF;" class="alert-heading">Perhatian!</h4>
-          <p style="color: #F7F7EF;">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
+          <h4 style="color: #F7F7EF;" class="alert-heading" id="paymentTitle">Perhatian!</h4>
+          <p style="color: #F7F7EF;" id="paymentTitle">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
         </div>
       </div>
     </div>
@@ -356,7 +356,7 @@ $conn->close();
       <div class="col-sm-10">
         <div class="row" style="height: 65px">
           <div class="col-xs-4 col-md-2 col-2 text-left d-flex align-items-end mr-3">
-            <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
+            <h2 class="title-3 text-dark font-weight-bold" id="Title">Registrasi</h2>
           </div>
           <div class="col-md-1 col">
             <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
@@ -666,6 +666,8 @@ $conn->close();
       });
     });
   </script>
+
+<script src="./translation_regist.js"></script>
 </body>
 
 </html>
