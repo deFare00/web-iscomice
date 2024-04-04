@@ -1,6 +1,6 @@
 function translateTo(language) {
     // Get all elements that contain text you want to translate
-    const elementsToTranslate = document.querySelectorAll('#about p');
+    const elementsToTranslate = document.querySelectorAll('#registration p');
     
     // Example translation mappings
     const translations = {

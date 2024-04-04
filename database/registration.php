@@ -339,13 +339,7 @@ $conn->close();
   <div class="container py-5 mt-5">
     <div class="row">
       <div class="col">
-        <div style="background-color: #08145A;" class="p-4">
-          <h4 style="color: #F7F7EF;" class="heading custom-text" id="paymentTitle">Pembayaran dapat melalui :</h4>
-          <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
-          <br>
-          <h4 style="color: #F7F7EF;" class="alert-heading" id="paymentTitle">Perhatian!</h4>
-          <p style="color: #F7F7EF;" id="paymentTitle">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
-        </div>
+        <img src="../assets/ticket.PNG" alt="" style="width:700px; height:auto; margin-left:auto; margin-right:auto; display:block;">
       </div>
     </div>
   </div>
