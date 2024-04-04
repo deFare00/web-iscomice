@@ -98,6 +98,9 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\css\flag.css" rel="stylesheet" />
   <!-- flag -->
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="../style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -152,6 +155,15 @@ $conn->close();
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
+          </li>
+          <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+            <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -347,7 +359,7 @@ $conn->close();
             <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
           </div>
           <div class="col-md-1 col">
-          <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
+            <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
           </div>
         </div>
         <div class="row">
@@ -356,14 +368,14 @@ $conn->close();
         </div>
         <div class="row">
           <div class="col-sm-6 col-md-6 d-flex align-items-center py-3">
-          <img class="img-fluid mb-4" src="../assets/elements/iconBurung.png" style="width: 500px; height: 750px; object-fit: cover;" />
+            <img class="img-fluid mb-4" src="../assets/elements/iconBurung.png" style="width: 500px; height: 750px; object-fit: cover;" />
           </div>
           <div class="col-sm-6 col-md-6">
             <div class="py-4 text-black">
               Fill in the registration data. It will take a couple of minutes.
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
-            <div class="form-row">
+              <div class="form-row">
                 <div class="form-group col">
                   <label class="font-weight-bold">Full Name</label>
                   <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" />
@@ -529,7 +541,7 @@ $conn->close();
         <hr class="bg-solid-8" />
         <div>
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
-          Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
+            Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>
       </footer>
     </div>
