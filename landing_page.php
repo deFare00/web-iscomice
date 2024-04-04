@@ -355,7 +355,7 @@
                         </div>
                         <br />
                         <b class="text-green-old">Sandiaga Uno</b>
-                        <p><small>Minister of Tourism and Creative Economy of the Republic of Indonesia</small></p>
+                        <p id="keynoteSpeakersContent"><small>Menteri Pariwisata dan Ekonomi Kreatif Republik Indonesia</small></p>
                       </div>
                     </div>
                     <div class="px-2 mb-4">
@@ -365,8 +365,8 @@
                         </div>
                         <br />
                         <b class="text-green-old">Perry Warjiyo</b>
-                        <p>
-                          <small>Governor of Bank Indonesia</small>
+                        <p id="keynoteSpeakersContent">
+                          <small>Gubernur Bank Indonesia</small>
                         </p>
                       </div>
                     </div>
