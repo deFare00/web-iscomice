@@ -118,6 +118,9 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\css\flag.css" rel="stylesheet" />
   <!-- flag -->
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="../style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -172,6 +175,15 @@ $conn->close();
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
+          </li>
+          <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+            <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -513,7 +525,7 @@ $conn->close();
         <hr class="bg-solid-8" />
         <div>
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
-          Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
+            Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>
       </footer>
     </div>
