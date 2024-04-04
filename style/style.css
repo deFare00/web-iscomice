@@ -1,0 +1,21 @@
+.dropdown-menu {
+    background-color: #fff; /* Warna latar belakang dropdown */
+    border: none; /* Hapus border */
+    padding: 10px; /* Beri jarak antara item */
+    margin-top: 10px;
+  }
+  
+  .dropdown-item {
+    color: #333; /* Warna teks item */
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #f8f9fa; /* Warna latar belakang saat hover/fokus */
+    color: #333; /* Warna teks saat hover/fokus */
+  }
+  
+  .dropdown-item img {
+    margin-right: 20px; /* Beri jarak antara teks dan gambar bendera */
+  }
+  

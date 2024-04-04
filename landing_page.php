@@ -62,6 +62,9 @@
   <link href="https://invest.jakarta.go.id/front\css\flag.css" rel="stylesheet" />
   <!-- flag -->
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -101,24 +104,33 @@
 
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top"">
-    <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto menu">
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#about">About</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#schedule">Schedule</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
-          </li>
-        </ul>
-      </div>
+    <div class=" container">
+    <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto menu">
+        <li class="nav-item hover-line active text-capitalize text-lg-center">
+          <a class="nav-link px-md-3" href="#about">About</a>
+        </li>
+        <li class="nav-item hover-line active text-capitalize text-lg-center">
+          <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
+        </li>
+        <li class="nav-item hover-line active text-capitalize text-lg-center">
+          <a class="nav-link px-md-3" href="#schedule">Schedule</a>
+        </li>
+        <li class="nav-item hover-line active text-capitalize text-lg-center">
+          <a class="nav-link px-md-3" href="#speakers">Speakers</a>
+        </li>
+        <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+          <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" onclick="translateTo('id')" ><img src="assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+            <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="assets/united-states.png" alt="EN flag" width="20"> English</a>
+          </div>
+        </li>
+      </ul>
+    </div>
     </div>
   </nav>
   <script>
@@ -292,19 +304,19 @@
         </div>
         <div class="row mt-5">
           <div class="col">
-            <p><strong>History of INAMICE</strong></p>
-            <p>
+            <p id="historyTitle"><strong>Sejarah INAMICE</strong></p>
+            <p id="historyContent">
               INAMICE adalah official brand convention yang diusung pertama kali oleh Ibu Christina L. Rudatin, Ketua Forum Program Studi (FPS) MICE Yang sekaligus dosen MICE Politeknik Negeri Jakarta.
             </p>
-            <p>
+            <p id="historyContent">
               Sukses diselenggarakan oleh mahasiswa MICE PNJ angkatan 2011, INAMICE menjadi acara yang wajib dua tahun sekali dengan tema dan topik yang berbeda.
             </p>
-            <p>
+            <p id="historyContent">
               Bekerjasama dengan Forum Program Studi (FPS) MICE Indonesia, Indonesia Congress and Convention Association (INCCA) dan Lembaga Sertifikasi Profesi (LSP) MICE, Politeknik Negeri Jakarta telah menyelenggarakan sebuah konvensi nasional yang ikut andil menjadi penentu masa depan sumber daya manusia negara Indonesia yang bergerak di bidang MICE dalam menghadapi masyarakat ekonomi ASEAN.
             </p>
 
-            <p><strong>About INAMICE 2024</strong></p>
-            <p>
+            <p id="aboutTitle"><strong>Tentang INAMICE 2024</strong></p>
+            <p id="aboutContent">
               INAMICE merupakan kegiatan yang diagendakan secara rutin dan dilaksanakan oleh Politeknik Negeri Jakarta sebagai sebuah forum pertemuan antara dunia industri, akademisi, pemerintah, dan berbagai lingkup stakeholder Industri MICE untuk membahas isu-isu aktual ataupun perkembangan industri MICE ditiap tahunnya. INAMICE telah diselenggarakan sejak tahun 2014 dan di tahun 2024 ini merupakan penyelenggaraan ke-7 dengan tema besar membahas mengenai reposisi Jakarta.
             </p>
             <!--</div>-->
@@ -313,6 +325,7 @@
       </div>
     </div>
   </div>
+
   <div id="speakers" class="container py-5">
     <div class="row justify-content-center">
       <div class="col-sm-10">
@@ -321,7 +334,7 @@
             <h2 class="title-3 text-dark font-weight-bold">Speakers</h2>
           </div>
           <div class="col-md-1 col pl-0">
-          <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
+            <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
           </div>
         </div>
         <div class="row">
@@ -457,64 +470,57 @@
 -->
 
   <div class="bg-solid-9">
-  <div id="schedule" class="container py-5">
-        <div class="row justify-content-center pt-5">
-          <div class="col-sm-10">
-            <div class="row" style="height: 65px">
-              <div class="col-md-3 col-lg-2 col-4 text-left d-flex align-items-end">
-                <h2 class="title-3 text-dark font-weight-bold">Schedule</h2>
-              </div>
-              <div class="col-md-1 col pl-0">
+    <div id="schedule" class="container py-5">
+      <div class="row justify-content-center pt-5">
+        <div class="col-sm-10">
+          <div class="row" style="height: 65px">
+            <div class="col-md-3 col-lg-2 col-4 text-left d-flex align-items-end">
+              <h2 class="title-3 text-dark font-weight-bold">Schedule</h2>
+            </div>
+            <div class="col-md-1 col pl-0">
               <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10 col-12" style="border-top: 1px solid #000000"></div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <div class="row">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-3">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-2"></div>
-              <div
-                class="col-md-10 col-12"
-                style="border-top: 1px solid #000000"
-              ></div>
-            </div>
-                    </div>
-            <div class="row mt-5">
-              <div class="col">
-                <div class="row">
-                  <div class="col-md-3">
-                  </div>
-                  <div class="col-md-3">        
-                  </div>
-                  <div class="col-md-3">  
-                  </div>
-                  <div class="col-md-3">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-10">
-          
-                      <img
-                        class=""
-                        style="
+              <div class="col-md-10">
+
+                <img class="" style="
                           display: block;
                           margin-left: auto;
                           margin-right: auto;
                           object-fit: cover;
-                        "
-                        src="assets/Rundown INAMICE.jpg"
-                        alt=""
-                      />
-                  </div>
-                </div>
-                <!--</div>-->
+                        " src="assets/Rundown INAMICE.jpg" alt="" />
               </div>
             </div>
+            <!--</div>-->
           </div>
         </div>
       </div>
+    </div>
   </div>
-  
+  </div>
+
   <div class="bg-solid-2 p-3 text-center font-weight-bold">
     In Collaboration With
   </div>
+
   <div class="container">
     <div class="py-5 justify-content-center">
       <div class="row justify-content-center">
@@ -530,6 +536,7 @@
       </div>
     </div>
   </div>
+
   <div class="jumbotron m-0 footer-text bg-solid-2 rounded-0 py-0">
     <div class="container py-4">
       <footer>
@@ -623,7 +630,7 @@
         <hr class="bg-solid-8" />
         <div>
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
-          Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
+            Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>
       </footer>
     </div>
@@ -1074,6 +1081,8 @@
       });
     });
   </script>
+
+  <script src="translation.js"></script>
 </body>
 
 </html>
