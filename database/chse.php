@@ -11,10 +11,12 @@ if (isset($_GET['user_id'])) {
         $question2 = $_POST['question_2'];
         $question3 = $_POST['question_3'];
         $question4 = $_POST['question_4'];
+        $question5 = $_POST['question_5'];
+        $question6 = $_POST['question_6'];
 
         // Query SQL untuk menyimpan data ke dalam tabel
-        $sql = "INSERT INTO user_chse (user_id, question_1, question_2, question_3, question_4) 
-                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4')";
+        $sql = "INSERT INTO user_chse (user_id, question_1, question_2, question_3, question_4, question_5, question_6) 
+                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6')";
 
         // Jalankan query dan periksa apakah berhasil
         if ($conn->query($sql) === TRUE) {
@@ -387,25 +389,14 @@ $conn->close();
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_2" id="question_2" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_2" id="question_2" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, kondisi kesehatan bagaimana yang perlu dipertimbangkan?</label>
+                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
                                 <div class="yes-no-options">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes" required>
@@ -422,7 +413,7 @@ $conn->close();
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
+                                <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
                                 <div class="yes-no-options">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="question_4" id="question_4" value="yes" required>
@@ -436,6 +427,29 @@ $conn->close();
                                             Tidak
                                         </label>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, obat apa yang memicu alergi Anda?</label>
+                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-row">

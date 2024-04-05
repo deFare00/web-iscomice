@@ -14,10 +14,11 @@ if (isset($_GET['user_id'])) {
         $question5 = $_POST['question_5'];
         $question6 = $_POST['question_6'];
         $question7 = $_POST['question_7'];
+        $question8 = $_POST['question_8'];
 
         // Query SQL untuk menyimpan data ke dalam tabel
-        $sql = "INSERT INTO user_alergic (user_id, question_1, question_2, question_3, question_4, question_5, question_6, question_7) 
-                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6', '$question7')";
+        $sql = "INSERT INTO user_alergic (user_id, question_1, question_2, question_3, question_4, question_5, question_6, question_7, question_8) 
+                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6', '$question7', '$question8')";
 
         // Jalankan query dan periksa apakah berhasil
         if ($conn->query($sql) === TRUE) {
@@ -436,27 +437,33 @@ $conn->close();
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, riwayat reaksi atau masalah kesehatan apa yang berkaitan dengan makanan tertentu?</label>
+                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada instruksi khusus yang ingin Anda bagikan mengenai persiapan atau penanganan makanan Anda?</label>
+                                    <input type="text" class="form-control" id="question_7" name="question_7" placeholder="" required />
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah ada instruksi khusus yang ingin Anda bagikan mengenai persiapan atau penanganan makanan Anda?</label>
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda seorang vegetarian atau vegan?</label>
                                 <div class="yes-no-options">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_6" id="question_6" value="yes" required>
+                                        <input class="form-check-input" type="radio" name="question_8" id="question_8" value="yes" required>
                                         <label class="form-check-label" for="yes" id="fieldTitle">
                                             Ya
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_6" id="question_6" value="no" required>
+                                        <input class="form-check-input" type="radio" name="question_8" id="question_8" value="no" required>
                                         <label class="form-check-label" for="no" id="fieldTitle">
                                             Tidak
                                         </label>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda seorang vegetarian atau vegan?</label>
-                                    <input type="text" class="form-control" id="question_7" name="question_7" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
