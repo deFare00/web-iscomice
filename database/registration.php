@@ -190,7 +190,7 @@ $conn->close();
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto menu">
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#about">About</a>
+            <a class="nav-link px-md-3" href="../landing_page.php">About</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
