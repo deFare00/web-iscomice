@@ -100,7 +100,7 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
 
   <!-- style -->
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../public/style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -350,7 +350,7 @@ $conn->close();
       <div class="col-sm-10">
         <div class="row" style="height: 65px">
           <div class="col-xs-4 col-md-2 col-2 text-left d-flex align-items-end mr-3">
-            <h2 class="title-3 text-dark font-weight-bold" id="Title">Registrasi</h2>
+            <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
           </div>
           <div class="col-md-1 col">
             <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
@@ -366,73 +366,72 @@ $conn->close();
           </div>
           <div class="col-sm-6 col-md-6">
             <div class="py-4 text-black">
-              Fill in the registration data. It will take a couple of minutes.
+              <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Full Name</label>
-                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" />
+                  <label class="font-weight-bold" id="fieldTitle">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" required/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold" for="inputEmail4">Gender</label>
+                  <label class="font-weight-bold" for="inputEmail4" id="fieldTitle">Jenis Kelamin</label>
                   <select id="gender" name="gender" class="form-control text-truncate">
-                    <option value="" disabled selected hidden="">
-                      Select Your Gender
+                    <option value="" disabled selected hidden="" id="fieldTitle">
+                    Pilih Jenis Kelamin Anda
                     </option>
-                    <option class="text-truncate">
-                      Male
+                    <option class="text-truncate" id="fieldTitle">
+                    Pria
                     </option>
-                    <option class="text-truncate">
-                      Female
+                    <option class="text-truncate" id="fieldTitle">
+                    Wanita
                     </option>
                   </select>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Phone Number</label>
-                  <input type="text" class="form-control" id="hp" name="hp" placeholder="" />
+                  <label class="font-weight-bold" id="fieldTitle">Nomor Telepon</label>
+                  <input type="text" class="form-control" id="hp" name="hp" placeholder="" required/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Email</label>
-                  <input type="email" class="form-control" id="mail" name="mail" placeholder="" />
+                  <label class="font-weight-bold" id="fieldTitle">Email</label>
+                  <input type="email" class="form-control" id="mail" name="mail" placeholder="" required/>
                   <div class="invalid-feedback">Invalid email</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Address</label>
-                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" />
+                  <label class="font-weight-bold" id="fieldTitle">Alamat</label>
+                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" required/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Job</label>
+                  <label class="font-weight-bold" id="fieldTitle">Pekerjaan</label>
                   <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" placeholder="" autocomplete="off" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Organization/Company/Institution</label>
+                  <label class="font-weight-bold" id="fieldTitle">Organisasi/Perusahaan/Institusi</label>
                   <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" placeholder="" autocomplete="off" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col text-center">
                   <br />
-                  <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button">
-                    Next
+                  <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
+                    Selanjutnya
                   </button>
                 </div>
               </div>
-              <div class="bg-solid-9 py-3 px-3 px-lg-5">
-                <small>We take privacy issues seriously. You can be sure that your
-                  personal data is securely protected.</small>
+              <div class="bg-solid-9 py-3 px-5 px-lg-5">
+                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
               </div>
             </form>
           </div>
@@ -661,7 +660,7 @@ $conn->close();
     });
   </script>
 
-<script src="./translation_regist.js"></script>
+<script src="../public/js/id_eng1.js"></script>
 </body>
 
 </html>

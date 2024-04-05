@@ -343,13 +343,7 @@ $conn->close();
     <div class="container py-5 mt-5">
         <div class="row">
             <div class="col">
-                <div style="background-color: #08145A;" class="p-4">
-                    <h4 style="color: #F7F7EF;" class="heading custom-text">Pembayaran dapat melalui :</h4>
-                    <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
-                    <br>
-                    <h4 style="color: #F7F7EF;" class="alert-heading">Perhatian!</h4>
-                    <p style="color: #F7F7EF;">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
-                </div>
+                <img src="../assets/ticket.PNG" alt="" style="width:700px; height:auto; margin-left:auto; margin-right:auto; display:block;">
             </div>
         </div>
     </div>
@@ -399,7 +393,7 @@ $conn->close();
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">If so, what food items trigger your allergy?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
+                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -422,25 +416,25 @@ $conn->close();
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">If so, what preservative triggered your allergy?</label>
-                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" />
+                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Is there a history of allergic reactions or health problems related to certain foods?</label>
-                                    <input type="text" class="form-control" id="question_5" name="question_5" placeholder="" />
+                                    <input type="text" class="form-control" id="question_5" name="question_5" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Are there any special instructions you would like to share regarding the preparation or handling of your food?</label>
-                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" />
+                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Are you a vegetarian or a vegan?</label>
-                                    <input type="text" class="form-control" id="question_7" name="question_7" placeholder="" />
+                                    <input type="text" class="form-control" id="question_7" name="question_7" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">

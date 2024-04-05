@@ -340,13 +340,7 @@ $conn->close();
     <div class="container py-5 mt-5">
         <div class="row">
             <div class="col">
-                <div style="background-color: #08145A;" class="p-4">
-                    <h4 style="color: #F7F7EF;" class="heading custom-text">Pembayaran dapat melalui :</h4>
-                    <p style="color: #F7F7EF;" class="mb-0 custom-text">BCA : 8410694817 a.n Derefita Fitri</p>
-                    <br>
-                    <h4 style="color: #F7F7EF;" class="alert-heading">Perhatian!</h4>
-                    <p style="color: #F7F7EF;">Pembatalan registrasi pada H-7 acara maka dana akan dikembalikan sebesar 25%</p>
-                </div>
+                <img src="../assets/ticket.PNG" alt="" style="width:700px; height:auto; margin-left:auto; margin-right:auto; display:block;">
             </div>
         </div>
     </div>
@@ -379,25 +373,25 @@ $conn->close();
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Do you have any specific health conditions that may need to be considered?</label>
-                                    <input type="text" class="form-control" id="question_1" name="question_1" placeholder="" />
+                                    <input type="text" class="form-control" id="question_1" name="question_1" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Are you currently taking any medications for your health condition?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
+                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Are there any special prescription medications that you need to carry or give to the medical team in an emergency situation?</label>
-                                    <input type="text" class="form-control" id="question_3" name="question_3" placeholder="" />
+                                    <input type="text" class="form-control" id="question_3" name="question_3" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
                                     <label class="font-weight-bold">Do you have any allergies to certain medications that need to be noted?</label>
-                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" />
+                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">

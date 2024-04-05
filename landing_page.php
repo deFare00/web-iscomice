@@ -1082,7 +1082,7 @@
     });
   </script>
 
-  <script src="translation.js"></script>
+  <script src="public/js/id_eng.js"></script>
 </body>
 
 </html>
