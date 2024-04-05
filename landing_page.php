@@ -89,6 +89,60 @@
     .owl-carousel div:not(.owl-controls) {
       height: 100%;
     }
+
+    @media (max-width: 767px) {
+  /* Adjust navbar styles for smaller screens */
+  .navbar-collapse {
+    background-color: #000; /* Change background color for better visibility */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it's above other content */
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar-collapse.show {
+    transform: translateY(0%);
+  }
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin: 20px 0;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px;
+    color: #fff;
+  }
+  /* Adjust header height */
+  .jumbotron {
+    padding: 2rem 1rem;
+  }
+  /* Adjust font sizes */
+  .title-3 {
+    font-size: 24px;
+  }
+  /* Adjust speaker cards */
+  .px-2 {
+    width: 100%;
+  }
+  .grayscale {
+    height: auto;
+  }
+  /* Adjust footer layout */
+  .text-footer {
+    margin-top: 20px;
+  }
+  .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+}
+
   </style>
   <style>
     /*
@@ -501,7 +555,7 @@
             <div class="row">
               <div class="col-md-10">
 
-                <img class="" style="
+                <img class="img-responsive" style="
                           display: block;
                           margin-left: auto;
                           margin-right: auto;
@@ -524,11 +578,11 @@
   <div class="container">
     <div class="py-5 justify-content-center">
       <div class="row justify-content-center">
-        <div class="col-lg-8 col d-none d-md-block">
+        <div class="col-lg-8 col">
           <div class="row justify-content-center">
             <div class="col justify-content-center d-flex align-items-center">
               <div class="d-flex align-items-center p-4">
-                <img src="assets/all_sponsor.png" style="max-height: 500px; object-fit: contain" />
+                <img src="assets/all_sponsor.png" class="img-fluid" style="max-height: 500px; object-fit: contain" />
               </div>
             </div>
           </div>
