@@ -101,7 +101,7 @@ $conn->close();
     <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
 
     <!-- style -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../public/style/style.css">
     <!-- Highchart -->
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -367,44 +367,43 @@ $conn->close();
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="py-4 text-black">
-                            Fill in the registration data. It will take a couple of minutes.
+                            <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
                         </div>
                         <form id="registrasi" name="registrasi" method="post" action="chse.php?user_id=<?php echo $user_id; ?>">
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Do you have any specific health conditions that may need to be considered?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?</label>
                                     <input type="text" class="form-control" id="question_1" name="question_1" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Are you currently taking any medications for your health condition?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
                                     <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Are there any special prescription medications that you need to carry or give to the medical team in an emergency situation?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
                                     <input type="text" class="form-control" id="question_3" name="question_3" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Do you have any allergies to certain medications that need to be noted?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
                                     <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col text-center">
                                     <br />
-                                    <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button">
-                                        Next
+                                    <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
+                                        Selanjutnya
                                     </button>
                                 </div>
                             </div>
                             <div class="bg-solid-9 py-3 px-3 px-lg-5">
-                                <small>We take privacy issues seriously. You can be sure that your
-                                    personal data is securely protected.</small>
+                                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
                             </div>
                         </form>
                     </div>
@@ -493,14 +492,14 @@ $conn->close();
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 text-center py-3">
-                        <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
                         <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
-                            <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                            <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.png'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
                     </div>
                 </div>
@@ -632,6 +631,7 @@ $conn->close();
             });
         });
     </script>
+    <script src="../public/js/id_eng3.js"></script>
 </body>
 
 </html>

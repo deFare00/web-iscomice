@@ -111,6 +111,7 @@ $conn->close();
   <!-- Highchart -->
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" type="text/css" href="https://invest.jakarta.go.id/front\flipbook\deploy\css\flipbook.style.css" />
   <!-- flipbook-->
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
@@ -127,14 +128,15 @@ $conn->close();
     }
   </style>
   <style>
-    /*
-  .owl-carousel .exhibiz {
-  position: relative;
-  height: 100%;
-  }
-  .owl-carousel .exhibiz div:not(.owl-controls) {
-  height: 100%;
-  }*/
+    .swal2-popup {
+      font-size: 0.875rem;
+      /* Ubah sesuai kebutuhan */
+    }
+
+    .custom-popup-class {
+      font-size: 0.875rem;
+      /* Ubah sesuai kebutuhan */
+    }
   </style>
 </head>
 
@@ -659,6 +661,26 @@ $conn->close();
       });
     });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Periksa apakah parameter query string success diatur
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('success') && urlParams.get('success') === 'true') {
+        // Tampilkan popup notifikasi SweetAlert2
+        Swal.fire({
+          title: 'Selamat Anda Berhasil Terdaftar Pada Event ini',
+          icon: 'success',
+          showCloseButton: true,
+          showConfirmButton: false,
+          customClass: {
+            popup: 'custom-popup-class' // Nama kelas CSS khusus untuk notifikasi
+          }
+        });
+      }
+    });
+  </script>
+
 
   <script src="../public/js/id_eng1.js"></script>
 </body>

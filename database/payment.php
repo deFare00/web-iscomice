@@ -33,7 +33,7 @@ if (isset($_GET['user_id'])) {
         // Jalankan query dan periksa apakah berhasil
         if ($conn->query($sql) === TRUE) {
           // Redirect ke halaman lain setelah formulir disubmit
-          header("Location: registration.php"); // Ganti "sukses.php" dengan halaman tujuan
+          header("Location: registration.php?success=true"); // Ganti "sukses.php" dengan halaman tujuan
           exit; // Pastikan tidak ada output lain sebelum redirect
         } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
@@ -120,7 +120,7 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
 
   <!-- style -->
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../public/style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -386,37 +386,36 @@ $conn->close();
           </div>
           <div class="col-sm-6 col-md-6">
             <div class="py-4 text-black">
-              Fill in the registration data. It will take a couple of minutes.
+              <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
             </div>
             <form id="registrasi" name="registrasi" method="post" action="payment.php?user_id=<?php echo $user_id; ?>" enctype="multipart/form-data">
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold" for="inputEmail4">Payment Method</label>
+                  <label class="font-weight-bold" for="inputEmail4" id="fieldTitle">Metode Pembayaran</label>
                   <select id="payment_method" name="payment_method" class="form-control text-truncate">
-                    <option value="" disabled selected hidden="">
-                      Select Your Payment Methods
+                    <option value="" disabled selected hidden="" id="fieldTitle">
+                      Pilih Metode Pembayaran Anda
                     </option>
-                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="Bank Transfer" id="fieldTitle">Transfer Antar Bank</option>
                   </select>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <label class="font-weight-bold">Upload Payment Proof</label>
+                  <label class="font-weight-bold" id="fieldTitle">Unggah Bukti Pembayaran</label>
                   <input type="file" class="form-control-file" id="payment_proof" name="payment_proof" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col text-center">
                   <br />
-                  <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button">
-                    Register
+                  <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
+                    Daftar
                   </button>
                 </div>
               </div>
               <div class="bg-solid-9 py-3 px-3 px-lg-5">
-                <small>We take privacy issues seriously. You can be sure that your
-                  personal data is securely protected.</small>
+                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
               </div>
             </form>
           </div>
@@ -505,14 +504,14 @@ $conn->close();
             </div>
           </div>
           <div class="col-12 col-sm-4 text-center py-3">
-            <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+            <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+            <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
             <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
-              <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+              <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.png'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+            <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
           </div>
         </div>
@@ -644,6 +643,7 @@ $conn->close();
       });
     });
   </script>
+  <script src="../public/js/id_eng4.js"></script>
 </body>
 
 </html>

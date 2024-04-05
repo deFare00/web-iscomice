@@ -104,7 +104,7 @@ $conn->close();
     <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
 
     <!-- style -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../public/style/style.css">
     <!-- Highchart -->
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -370,84 +370,83 @@ $conn->close();
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="py-4 text-black">
-                            Fill in the registration data. It will take a couple of minutes.
+                            <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
                         </div>
                         <form id="registrasi" name="registrasi" method="post" action="alergic.php?user_id=<?php echo $user_id; ?>">
                             <div class="form-group">
-                                <label class="font-weight-bold">Do you have allergies to certain foods?</label>
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap makanan tertentu?</label>
                                 <div class="yes-no-options">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="yes">
-                                        <label class="form-check-label" for="yes">
-                                            Yes
+                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="no">
-                                        <label class="form-check-label" for="no">
-                                            No
+                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">If so, what food items trigger your allergy?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" required />
+                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, makanan apa yang memicu alergi Anda?</label>
+                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Are you allergic to certain food additives or preservatives?</label>
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda alergi terhadap bahan tambahan atau pengawet makanan tertentu?</label>
                                 <div class="yes-no-options">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes">
-                                        <label class="form-check-label" for="yes">
-                                            Yes
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="no">
-                                        <label class="form-check-label" for="no">
-                                            No
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">If so, what preservative triggered your allergy?</label>
-                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" required />
+                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, pengawet apa yang memicu alergi Anda?</label>
+                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Is there a history of allergic reactions or health problems related to certain foods?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada riwayat reaksi alergi atau masalah kesehatan yang berkaitan dengan makanan tertentu?</label>
                                     <input type="text" class="form-control" id="question_5" name="question_5" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Are there any special instructions you would like to share regarding the preparation or handling of your food?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada instruksi khusus yang ingin Anda bagikan mengenai persiapan atau penanganan makanan Anda?</label>
                                     <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold">Are you a vegetarian or a vegan?</label>
+                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda seorang vegetarian atau vegan?</label>
                                     <input type="text" class="form-control" id="question_7" name="question_7" placeholder="" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col text-center">
                                     <br />
-                                    <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button">
-                                        Next
+                                    <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
+                                        Selanjutnya
                                     </button>
                                 </div>
                             </div>
                             <div class="bg-solid-9 py-3 px-3 px-lg-5">
-                                <small>We take privacy issues seriously. You can be sure that your
-                                    personal data is securely protected.</small>
+                                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
                             </div>
                         </form>
                     </div>
@@ -536,14 +535,14 @@ $conn->close();
                         </div>
                     </div>
                     <div class="col-12 col-sm-4 text-center py-3">
-                        <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
                         <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
-                            <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                            <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.png'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px;"> </span></a>
+                        <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
                     </div>
                 </div>
@@ -675,6 +674,7 @@ $conn->close();
             });
         });
     </script>
+    <script src="../public/js/id_eng2.js"></script>
 </body>
 
 </html>
