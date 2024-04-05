@@ -262,7 +262,7 @@
   </div>
   <div id="home" class="h-100">
     <div class="jifBanner" style="
-          background-image: url(assets/konten\ feeds\ 2\ row\ \(1\).png);
+          background-image: url(assets/konten-feeds.png);
         ">
     </div>
   </div>
