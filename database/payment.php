@@ -21,7 +21,6 @@ if (isset($_GET['user_id'])) {
 
       // Pindahkan file yang diunggah ke direktori yang ditentukan
       if (move_uploaded_file($fileTempName, $uploadFile)) {
-        echo "File berhasil diunggah.";
 
         // Path file gambar untuk disimpan dalam database
         $paymentProofPath = $uploadFile;

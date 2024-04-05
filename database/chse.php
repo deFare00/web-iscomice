@@ -370,28 +370,72 @@ $conn->close();
                             <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
                         </div>
                         <form id="registrasi" name="registrasi" method="post" action="chse.php?user_id=<?php echo $user_id; ?>">
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?</label>
-                                    <input type="text" class="form-control" id="question_1" name="question_1" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_2" id="question_2" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_2" id="question_2" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
-                                    <input type="text" class="form-control" id="question_3" name="question_3" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
-                                    <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row">

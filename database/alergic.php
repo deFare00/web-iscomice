@@ -419,16 +419,38 @@ $conn->close();
                                     <input type="text" class="form-control" id="question_4" name="question_4" placeholder="" />
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada riwayat reaksi alergi atau masalah kesehatan yang berkaitan dengan makanan tertentu?</label>
-                                    <input type="text" class="form-control" id="question_5" name="question_5" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah ada riwayat reaksi alergi atau masalah kesehatan yang berkaitan dengan makanan tertentu?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Apakah ada instruksi khusus yang ingin Anda bagikan mengenai persiapan atau penanganan makanan Anda?</label>
-                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" required />
+                            <div class="form-group">
+                                <label class="font-weight-bold" id="fieldTitle">Apakah ada instruksi khusus yang ingin Anda bagikan mengenai persiapan atau penanganan makanan Anda?</label>
+                                <div class="yes-no-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_6" id="question_6" value="yes" required>
+                                        <label class="form-check-label" for="yes" id="fieldTitle">
+                                            Ya
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="question_6" id="question_6" value="no" required>
+                                        <label class="form-check-label" for="no" id="fieldTitle">
+                                            Tidak
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row">

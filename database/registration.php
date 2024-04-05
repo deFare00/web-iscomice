@@ -669,7 +669,7 @@ $conn->close();
       if (urlParams.has('success') && urlParams.get('success') === 'true') {
         // Tampilkan popup notifikasi SweetAlert2
         Swal.fire({
-          title: 'Selamat Anda Berhasil Terdaftar Pada Event ini',
+          title: 'Congratulations! You Have Successfully Registered for this Event',
           icon: 'success',
           showCloseButton: true,
           showConfirmButton: false,
