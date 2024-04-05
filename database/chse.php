@@ -186,11 +186,11 @@ $conn->close();
             }
 
             #ticket {
-                margin-top: -820px;
+                margin-top: -680px;
             }
 
             #registration {
-                margin-top: -340px;
+                margin-top: -290px;
             }
         }
     </style>

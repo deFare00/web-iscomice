@@ -163,10 +163,6 @@ $conn->close();
 
     @media (min-width: 768px) {
 
-      #ticket {
-        margin-top: -350px;
-      }
-
       .img-responsive {
         margin-top: -50px;
         width: auto;
@@ -200,11 +196,11 @@ $conn->close();
       }
 
       #ticket {
-        margin-top: -820px;
+        margin-top: -680px;
       }
 
       #registration {
-        margin-top: -340px;
+        margin-top: -290px;
       }
     }
   </style>

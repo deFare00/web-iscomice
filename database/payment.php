@@ -120,7 +120,6 @@ $conn->close();
 
   <!-- style -->
   <link rel="stylesheet" href="../public/style/style.css">
-  <link rel="stylesheet" href="../public/style/responsive.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -203,11 +202,11 @@ $conn->close();
       }
 
       #ticket {
-        margin-top: -780px;
+        margin-top: -680px;
       }
 
       #registration {
-        margin-top: -300px;
+        margin-top: -290px;
       }
     }
   </style>
