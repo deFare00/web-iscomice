@@ -5,6 +5,7 @@ function translateTo(language) {
     // Example translation mappings
     const translations = {
       'id': {
+        'Registration': 'Registrasi',
         'Fill in the registration data. It will take a couple of minutes.': 'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.',
         'Do you have any specific health conditions that may need to be considered?': 'Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?',
         'Yes': 'Ya',
@@ -21,6 +22,7 @@ function translateTo(language) {
         // Add more translations as needed
       },
       'en': {
+        'Registrasi': 'Registration',
         'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.': 'Fill in the registration data. It will take a couple of minutes.',
         'Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?': 'Do you have any specific health conditions that may need to be considered?',
         'Ya': 'Yes',

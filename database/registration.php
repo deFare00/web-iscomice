@@ -101,6 +101,7 @@ $conn->close();
 
   <!-- style -->
   <link rel="stylesheet" href="../public/style/style.css">
+
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -116,6 +117,13 @@ $conn->close();
   <!-- flipbook-->
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
 
+  <!-- CSS Fancybox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <!-- JavaScript Fancybox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <style>
     .owl-carousel {
@@ -125,6 +133,21 @@ $conn->close();
 
     .owl-carousel div:not(.owl-controls) {
       height: 100%;
+    }
+
+    /* CSS untuk gambar siluet */
+    .silhouette {
+      filter: grayscale(10%) brightness(0%);
+      opacity: 0.1;
+    }
+
+    /* CSS untuk gambar burung kecil */
+    .bird-small {
+      position: absolute;
+      bottom: 30px;
+      /* Sesuaikan dengan posisi yang diinginkan */
+      right: 30px;
+      /* Sesuaikan dengan posisi yang diinginkan */
     }
   </style>
   <style>
@@ -137,26 +160,46 @@ $conn->close();
       font-size: 0.875rem;
       /* Ubah sesuai kebutuhan */
     }
+
+    @media (min-width: 768px) {
+      .img-container {
+        text-align: center;
+      }
+
+      .img-container img {
+        max-width: 70%;
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .img-container img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
     <div class="container">
-      <a class="navbar-brand logo" href="../landing_page.php"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+      <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto menu">
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">About</a>
+            <a class="nav-link px-md-3" href="#about">About</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#registration">Registration</a>
+            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Schedule</a>
+            <a class="nav-link px-md-3" href="#schedule">Schedule</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">Speakers</a>
+            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
           </li>
           <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
             <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -171,6 +214,7 @@ $conn->close();
       </div>
     </div>
   </nav>
+
   <script>
     // Hide Header on on scroll down
     var didScroll;
@@ -236,9 +280,14 @@ $conn->close();
   <!-- slider -->
   <link href="https://invest.jakarta.go.id/front\OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css" rel="stylesheet" />
   <link href="https://invest.jakarta.go.id/front\OwlCarousel2-2.3.4\dist\assets\owl.carousel.min.css" rel="stylesheet" /><!-- slider -->
+  <div id="loader-wrapper">
+    <div class="circle justify-content-center d-flex align-items-center h-100">
+      <img src="assets/LOGO INAMICE HKI 1;1.png" class="img-item" alt="" style="max-width: 250px; width: 100%" />
+    </div>
+  </div>
   <div id="home" class="h-100">
     <div class="jifBanner" style="
-          background-image: url(../assets/konten\ feeds\ 2\ row\ \(1\).png);
+          background-image: url(../assets/konten-feeds.png);
         ">
     </div>
   </div>
@@ -341,109 +390,88 @@ $conn->close();
   <div class="container py-5 mt-5">
     <div class="row">
       <div class="col">
-        <img src="../assets/ticket.PNG" alt="" style="width:700px; height:auto; margin-left:auto; margin-right:auto; display:block;">
+        <div class="img-container">
+          <a href="../assets/ticket.PNG" data-fancybox>
+            <img src="../assets/ticket.PNG" alt="" class="img-fluid">
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Start Registration Form -->
-  <div id="registration" class="container py-5 clearfix">
+  <div id="registration" class="container py-5">
     <div class="row justify-content-center">
-      <div class="col-sm-10">
-        <div class="row" style="height: 65px">
-          <div class="col-xs-4 col-md-2 col-2 text-left d-flex align-items-end mr-3">
-            <h2 class="title-3 text-dark font-weight-bold">Registration</h2>
-          </div>
-          <div class="col-md-1 col">
-            <img class="img-fluid ml-1 mt-3" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
+      <div class="col-md-10">
+        <div class="row align-items-center mb-4">
+          <div class="col-md-3 col-6 d-flex align-items-center">
+            <h2 class="title-3 text-dark font-weight-bold" id="Title">Registration</h2>
+            <img class="img-fluid ml-2" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
           </div>
         </div>
+        <hr>
         <div class="row">
-          <div class="col-sm-4 col-md-3"></div>
-          <div class="col-md-9 col-12" style="border-top: 1px solid #000000"></div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-6 d-flex align-items-center py-3">
-            <img class="img-fluid mb-4" src="../assets/elements/iconBurung.png" style="width: 500px; height: 750px; object-fit: cover;" />
+          <div class="col-md-6 d-none d-md-block position-relative">
+            <!-- Gambar Burung Besar (Siluet) -->
+            <img class="img-fluid silhouette" src="../assets/elements/iconBurung.png" style="max-width: 100%; height: auto; " />
+
+            <!-- Gambar Burung Kecil (Warna Asli) -->
+            <img class="img-fluid bird-small" src="../assets/elements/iconBurung.png" alt="Small Bird" style="max-width: 40%; height: auto;" />
           </div>
-          <div class="col-sm-6 col-md-6">
-            <div class="py-4 text-black">
+          <div class="col-md-6">
+            <div class="py-4 text-black text-center">
               <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
             </div>
             <form id="registrasi" name="registrasi" method="post" action="registration.php">
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" required />
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="nama_lengkap">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required />
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" for="inputEmail4" id="fieldTitle">Jenis Kelamin</label>
-                  <select id="gender" name="gender" class="form-control text-truncate">
-                    <option value="" disabled selected hidden="" id="fieldTitle">
-                      Pilih Jenis Kelamin Anda
-                    </option>
-                    <option class="text-truncate" id="fieldTitle">
-                      Pria
-                    </option>
-                    <option class="text-truncate" id="fieldTitle">
-                      Wanita
-                    </option>
-                  </select>
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender" class="form-control">
+                  <option value="" disabled selected hidden>Pilih Jenis Kelamin Anda</option>
+                  <option>Pria</option>
+                  <option>Wanita</option>
+                </select>
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Nomor Telepon</label>
-                  <input type="text" class="form-control" id="hp" name="hp" placeholder="" required />
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="hp">Nomor Telepon</label>
+                <input type="text" class="form-control" id="hp" name="hp" required />
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Email</label>
-                  <input type="email" class="form-control" id="mail" name="mail" placeholder="" required />
-                  <div class="invalid-feedback">Invalid email</div>
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="mail">Email</label>
+                <input type="email" class="form-control" id="mail" name="mail" required />
+                <div class="invalid-feedback">Invalid email</div>
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Alamat</label>
-                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" required />
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="alamat">Alamat</label>
+                <input type="text" class="form-control" id="alamat" name="alamat" required />
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Pekerjaan</label>
-                  <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" placeholder="" autocomplete="off" />
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="pekerjaan">Pekerjaan</label>
+                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" autocomplete="off" />
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <label class="font-weight-bold" id="fieldTitle">Organisasi/Perusahaan/Institusi</label>
-                  <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" placeholder="" autocomplete="off" />
-                </div>
+              <div class="mb-3">
+                <label class="font-weight-bold" id="fieldTitle" for="nama_organisasi">Organisasi/Perusahaan/Institusi</label>
+                <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" autocomplete="off" />
               </div>
-              <div class="form-row">
-                <div class="form-group col text-center">
-                  <br />
-                  <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
-                    Selanjutnya
-                  </button>
-                </div>
-              </div>
-              <div class="bg-solid-9 py-3 px-5 px-lg-5">
-                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
+              <div class="mb-3 text-center">
+                <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" id="btnTitle">Selanjutnya</button>
               </div>
             </form>
+            <div class="bg-solid-9 py-3 px-5 text-center">
+              <p id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <!-- End Registration Form -->
 
-  <div class="jumbotron m-0 footer-text bg-solid-2 rounded-0 py-0">
+  <div class="jumbotron m-0 bg-solid-2 rounded-0 py-0">
     <div class="container py-4">
       <footer>
         <div class="row justify-content-center">

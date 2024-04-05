@@ -5,6 +5,7 @@ function translateTo(language) {
     // Example translation mappings
     const translations = {
       'id': {
+        'Registration': 'Registrasi',
         'Fill in the registration data. It will take a couple of minutes.': 'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.',
         'Do you have allergies to certain foods?': 'Apakah Anda memiliki alergi terhadap makanan tertentu?',
         'Yes': 'Ya',
@@ -25,6 +26,7 @@ function translateTo(language) {
         // Add more translations as needed
       },
       'en': {
+        'Registrasi': 'Registration',
         'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.': 'Fill in the registration data. It will take a couple of minutes.',
         'Apakah Anda memiliki alergi terhadap makanan tertentu?': 'Do you have allergies to certain foods?',
         'Ya': 'Yes',

@@ -5,6 +5,7 @@ function translateTo(language) {
     // Example translation mappings
     const translations = {
       'id': {
+        'Registration': 'Registrasi',
         'History of INAMICE': 'Sejarah INAMICE',
         'About INAMICE 2024': 'Tentang INAMICE 2024',
         'INAMICE is an official brand convention that was first promoted by Mrs. Christina L. Rudatin, Chairperson of the MICE Study Program Forum (FPS) who is also a lecturer in MICE at Politeknik Negeri Jakarta.': 'INAMICE adalah official brand convention yang diusung pertama kali oleh Ibu Christina L. Rudatin, Ketua Forum Program Studi (FPS) MICE Yang sekaligus dosen MICE Politeknik Negeri Jakarta.',
@@ -17,6 +18,7 @@ function translateTo(language) {
         // Add more translations as needed
       },
       'en': {
+        'Registrasi': 'Registration',
         'Sejarah INAMICE': 'History of INAMICE',
         'Tentang INAMICE 2024': 'About INAMICE 2024',
         'INAMICE adalah official brand convention yang diusung pertama kali oleh Ibu Christina L. Rudatin, Ketua Forum Program Studi (FPS) MICE Yang sekaligus dosen MICE Politeknik Negeri Jakarta.': 'INAMICE is an official brand convention that was first promoted by Mrs. Christina L. Rudatin, Chairperson of the MICE Study Program Forum (FPS) who is also a lecturer in MICE at Politeknik Negeri Jakarta.',
