@@ -78,6 +78,7 @@
   <link rel="stylesheet" type="text/css" href="https://invest.jakarta.go.id/front\flipbook\deploy\css\flipbook.style.css" />
   <!-- flipbook-->
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
+  
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <style>
@@ -91,58 +92,70 @@
     }
 
     @media (max-width: 767px) {
-  /* Adjust navbar styles for smaller screens */
-  .navbar-collapse {
-    background-color: #000; /* Change background color for better visibility */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow-y: auto;
-    z-index: 1000; /* Ensure it's above other content */
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  .navbar-collapse.show {
-    transform: translateY(0%);
-  }
-  .navbar-nav {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar-nav .nav-item {
-    margin: 20px 0;
-  }
-  .navbar-nav .nav-link {
-    padding: 10px;
-    color: #fff;
-  }
-  /* Adjust header height */
-  .jumbotron {
-    padding: 2rem 1rem;
-  }
-  /* Adjust font sizes */
-  .title-3 {
-    font-size: 24px;
-  }
-  /* Adjust speaker cards */
-  .px-2 {
-    width: 100%;
-  }
-  .grayscale {
-    height: auto;
-  }
-  /* Adjust footer layout */
-  .text-footer {
-    margin-top: 20px;
-  }
-  .img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-}
 
+      /* Adjust navbar styles for smaller screens */
+      .navbar-collapse {
+        background-color: #000;
+        /* Change background color for better visibility */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 1000;
+        /* Ensure it's above other content */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .navbar-collapse.show {
+        transform: translateY(0%);
+      }
+
+      .navbar-nav {
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 20px 0;
+      }
+
+      .navbar-nav .nav-link {
+        padding: 10px;
+        color: #fff;
+      }
+
+      /* Adjust header height */
+      .jumbotron {
+        padding: 2rem 1rem;
+      }
+
+      /* Adjust font sizes */
+      .title-3 {
+        font-size: 24px;
+      }
+
+      /* Adjust speaker cards */
+      .px-2 {
+        width: 100%;
+      }
+
+      .grayscale {
+        height: auto;
+      }
+
+      /* Adjust footer layout */
+      .text-footer {
+        margin-top: 20px;
+      }
+
+      .img-responsive {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   </style>
   <style>
     /*
@@ -154,46 +167,121 @@
   height: 100%;
   }*/
   </style>
+
+  <style>
+    .jifBanner {
+      background-size: cover;
+      /* Menyesuaikan ukuran gambar dengan ukuran elemen */
+      background-position: center;
+      /* Memposisikan gambar ke tengah */
+      height: 100vh;
+      /* Mengatur ketinggian gambar agar sesuai dengan tinggi layar */
+    }
+
+    /* Mengubah proporsi atau ukuran gambar pada perangkat dengan lebar layar maksimum 768px (misalnya, perangkat tablet dan smartphone dalam orientasi potret) */
+    @media only screen and (max-width: 768px) {
+      .jifBanner {
+        height: 50vh;
+        /* Mengatur ketinggian gambar agar setengah tinggi layar */
+        margin-top: 65px;
+      }
+
+      #about {
+        margin-top: -350px;
+      }
+
+      #speakers {
+        margin-top: -100px;
+      }
+
+      #schedule {
+        margin-top: -90px;
+      }
+
+      #schedule-assets {
+        margin-top: -75px;
+      }
+
+      .img-responsive{
+        margin-top: -50px;
+        width: auto;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+
+    /* Mengubah proporsi atau ukuran gambar pada perangkat dengan lebar layar maksimum 576px (misalnya, smartphone dalam orientasi potret) */
+    @media only screen and (max-width: 576px) {
+      .jifBanner {
+        height: 40vh;
+        /* Mengatur ketinggian gambar agar lebih kecil */
+        margin-top: 65px;
+      }
+
+      #about {
+        margin-top: -420px;
+      }
+
+      #speakers {
+        margin-top: -100px;
+      }
+
+      #schedule {
+        margin-top: -110px;
+      }
+
+      #schedule-assets {
+        margin-top: -95px;
+      }
+
+      .img-responsive {
+        margin-top: -30px;
+        width: auto;
+        height: 275px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg text-white fixed-top">
+  <nav class="navbar navbar-expand-lg text-white fixed-top">
     <div class="container">
-        <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><img src="assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto menu">
-                <li class="nav-item hover-line active text-capitalize text-lg-center">
-                    <a class="nav-link px-md-3" href="#about">About</a>
-                </li>
-                <li class="nav-item hover-line active text-capitalize text-lg-center">
-                    <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
-                </li>
-                <li class="nav-item hover-line active text-capitalize text-lg-center">
-                    <a class="nav-link px-md-3" href="#schedule">Schedule</a>
-                </li>
-                <li class="nav-item hover-line active text-capitalize text-lg-center">
-                    <a class="nav-link px-md-3" href="#speakers">Speakers</a>
-                </li>
-                <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
-                    <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Language
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="assets/indonesia.png"
-                                alt="ID flag" width="20"> Bahasa Indonesia </a>
-                        <a class="dropdown-item" href="#" onclick="translateTo('en')"><img
-                                src="assets/united-states.png" alt="EN flag" width="20"> English</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><img src="assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto menu">
+          <li class="nav-item hover-line active text-capitalize text-lg-center">
+            <a class="nav-link px-md-3" href="#about">About</a>
+          </li>
+          <li class="nav-item hover-line active text-capitalize text-lg-center">
+            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
+          </li>
+          <li class="nav-item hover-line active text-capitalize text-lg-center">
+            <a class="nav-link px-md-3" href="#schedule">Schedule</a>
+          </li>
+          <li class="nav-item hover-line active text-capitalize text-lg-center">
+            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
+          </li>
+          <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+            <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Language
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="assets/united-states.png" alt="EN flag" width="20"> English</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
   <script>
     // Hide Header on on scroll down
     var didScroll;
@@ -359,9 +447,9 @@
             <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
           </div>
         </div>
+        <hr>
         <div class="row">
           <div class="col-md-2"></div>
-          <div class="col-md-10 col-12" style="border-top: 1px solid #000000"></div>
         </div>
         <div class="row mt-5">
           <div class="col">
@@ -398,9 +486,9 @@
             <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets-->
           </div>
         </div>
+        <hr>
         <div class="row">
           <div class="col-md-3"></div>
-          <div class="col-md-9 col-12" style="border-top: 1px solid #000000"></div>
         </div>
         <div class="row mt-5">
           <div class="col-12 col-md-12 text-justify align-self-center">
@@ -533,7 +621,7 @@
   <div class="bg-solid-9">
     <div id="schedule" class="container py-5">
       <div class="row justify-content-center pt-5">
-        <div class="col-sm-10">
+        <div id="schedule-assets" class="col-sm-10">
           <div class="row" style="height: 65px">
             <div class="col-md-3 col-lg-2 col-4 text-left d-flex align-items-end">
               <h2 class="title-3 text-dark font-weight-bold">Schedule</h2>
@@ -542,9 +630,9 @@
               <img class="img-fluid ml-3 mt-3" src="assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" /> <!--Icon assets -->
             </div>
           </div>
+          <hr>
           <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-10 col-12" style="border-top: 1px solid #000000"></div>
           </div>
         </div>
         <div class="row mt-5">

@@ -177,6 +177,22 @@ $conn->close();
                 max-width: 100%;
             }
         }
+
+        @media only screen and (max-width: 576px) {
+            .jifBanner {
+                height: 35vh;
+                /* Mengatur ketinggian gambar agar lebih kecil */
+                margin-top: 65px;
+            }
+
+            #ticket {
+                margin-top: -820px;
+            }
+
+            #registration {
+                margin-top: -340px;
+            }
+        }
     </style>
 </head>
 
@@ -286,7 +302,7 @@ $conn->close();
     </div>
     <div id="home" class="h-100">
         <div class="jifBanner" style="
-          background-image: url(assets/konten-feeds.png);
+          background-image: url(../assets/konten-feeds.png);
         ">
         </div>
     </div>
@@ -391,7 +407,7 @@ $conn->close();
             <div class="col">
                 <div class="img-container">
                     <a href="../assets/ticket.PNG" data-fancybox>
-                        <img src="../assets/ticket.PNG" alt="" class="img-fluid">
+                        <img src="../assets/ticket.PNG" alt="" id="ticket" class="img-fluid">
                     </a>
                 </div>
             </div>
