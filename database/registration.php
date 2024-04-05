@@ -372,7 +372,7 @@ $conn->close();
               <div class="form-row">
                 <div class="form-group col">
                   <label class="font-weight-bold" id="fieldTitle">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" required/>
+                  <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="" required />
                 </div>
               </div>
               <div class="form-row">
@@ -380,13 +380,13 @@ $conn->close();
                   <label class="font-weight-bold" for="inputEmail4" id="fieldTitle">Jenis Kelamin</label>
                   <select id="gender" name="gender" class="form-control text-truncate">
                     <option value="" disabled selected hidden="" id="fieldTitle">
-                    Pilih Jenis Kelamin Anda
+                      Pilih Jenis Kelamin Anda
                     </option>
                     <option class="text-truncate" id="fieldTitle">
-                    Pria
+                      Pria
                     </option>
                     <option class="text-truncate" id="fieldTitle">
-                    Wanita
+                      Wanita
                     </option>
                   </select>
                 </div>
@@ -394,20 +394,20 @@ $conn->close();
               <div class="form-row">
                 <div class="form-group col">
                   <label class="font-weight-bold" id="fieldTitle">Nomor Telepon</label>
-                  <input type="text" class="form-control" id="hp" name="hp" placeholder="" required/>
+                  <input type="text" class="form-control" id="hp" name="hp" placeholder="" required />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
                   <label class="font-weight-bold" id="fieldTitle">Email</label>
-                  <input type="email" class="form-control" id="mail" name="mail" placeholder="" required/>
+                  <input type="email" class="form-control" id="mail" name="mail" placeholder="" required />
                   <div class="invalid-feedback">Invalid email</div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
                   <label class="font-weight-bold" id="fieldTitle">Alamat</label>
-                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" required/>
+                  <input type="address" class="form-control" id="alamat" name="alamat" placeholder="" required />
                 </div>
               </div>
               <div class="form-row">
@@ -660,7 +660,7 @@ $conn->close();
     });
   </script>
 
-<script src="../public/js/id_eng1.js"></script>
+  <script src="../public/js/id_eng1.js"></script>
 </body>
 
 </html>
