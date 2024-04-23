@@ -18,17 +18,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>Indonesia Mice Conference And Exhibition | INAMICE 2024</title>
-  <meta name="title" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta name="description" content="Jakarta Investment Forum is an international annual forum to promote and showcase business opportunities in Jakarta Capital City" />
-  <meta name="keywords" content="jakarta investment center, invest jakarta, penanaman modal, jakarta green investment" />
+  <meta name="title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta name="description" content="Repositioning Jakarta to Become a Leading Global Business Tourism Destination" />
+  <meta name="keywords" content="Indonesia Mice Conference And Exhibition" />
   <link rel="canonical" href="https://invest.jakarta.go.id/jakarta-investment-forum" />
   <meta property="og:url" content="https://invest.jakarta.go.id/jakarta-investment-forum" />
   <meta property="og:locale" content="en_EN" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta property="og:image" content="https://invest.jakarta.go.id/front/img/jif/jif-fav.png" />
-  <meta property="og:site_name" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta property="og:description" content="Jakarta Investment Forum is an international annual forum to promote and showcase business opportunities in Jakarta Capital City" />
+  <meta property="og:title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta property="og:image" content="assets/LOGO INAMICE HKI 1;1.png" />
+  <meta property="og:site_name" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta property="og:description" content="Repositioning Jakarta to Become a Leading Global Business Tourism Destination" />
   <meta name="Rating" content="general" />
   <meta name="Robots" content="all" />
   <link rel="shortcut icon" href="assets/LOGO INAMICE HKI 1;1.png" />
