@@ -1,38 +1,3 @@
-<?php
-include 'connection.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Ambil nilai dari formulir
-  $fullName = $_POST['nama_lengkap'];
-  $gender = $_POST['gender'];
-  $phoneNumber = $_POST['hp'];
-  $email = $_POST['mail'];
-  $alamat = $_POST['alamat'];
-  $pekerjaan = $_POST['pekerjaan'];
-  $namaOrganisasi = $_POST['nama_organisasi'];
-  $kategori = $_POST['kategori'];
-
-  // Query SQL untuk menyimpan data ke dalam tabel
-  $sql = "INSERT INTO registration_user (nama_lengkap, gender, hp, mail, alamat, pekerjaan, nama_organisasi, kategori) 
-                VALUES ('$fullName', '$gender', '$phoneNumber', '$email', '$alamat', '$pekerjaan', '$namaOrganisasi', '$kategori')";
-
-  // Jalankan query dan periksa apakah berhasil
-  if ($conn->query($sql) === TRUE) {
-    // Ambil user_id setelah operasi INSERT berhasil
-    $user_id = $conn->insert_id;
-
-    // Redirect ke halaman lain setelah formulir disubmit
-    header("Location: alergic.php?user_id=$user_id#registration"); // Ganti "sukses.php" dengan halaman tujuan
-    exit; // Pastikan tidak ada output lain sebelum redirect
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-}
-
-// Tutup koneksi ke database
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,20 +18,20 @@ $conn->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>Indonesia Mice Conference And Exhibition | INAMICE 2024</title>
-  <meta name="title" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta name="description" content="Jakarta Investment Forum is an international annual forum to promote and showcase business opportunities in Jakarta Capital City" />
-  <meta name="keywords" content="jakarta investment center, invest jakarta, penanaman modal, jakarta green investment" />
-  <link rel="canonical" href="https://invest.jakarta.go.id/jakarta-investment-forum" />
-  <meta property="og:url" content="https://invest.jakarta.go.id/jakarta-investment-forum" />
+  <meta name="title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta name="description" content="Repositioning Jakarta to Become a Leading Global Business Tourism Destination" />
+  <meta name="keywords" content="Indonesia Mice Conference And Exhibition" />
+  <link rel="canonical" href="https://inamice.id" />
+  <meta property="og:url" content="https://inamice.id" />
   <meta property="og:locale" content="en_EN" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta property="og:image" content="https://invest.jakarta.go.id/front/img/jif/jif-fav.png" />
-  <meta property="og:site_name" content="Jakarta Investment Forum | Global City And Beyond" />
-  <meta property="og:description" content="Jakarta Investment Forum is an international annual forum to promote and showcase business opportunities in Jakarta Capital City" />
+  <meta property="og:title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta property="og:image" content="assets/LOGO INAMICE HKI 1;1.png" />
+  <meta property="og:site_name" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
+  <meta property="og:description" content="Repositioning Jakarta to Become a Leading Global Business Tourism Destination" />
   <meta name="Rating" content="general" />
   <meta name="Robots" content="all" />
-  <link rel="shortcut icon" href="../assets/LOGO INAMICE HKI 1;1.png" />
+  <link rel="shortcut icon" href="assets/LOGO INAMICE HKI 1;1.png" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800|Raleway:100,200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
@@ -80,7 +45,7 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\bootstrap-4.1.3-dist\css\bootstrap.min.css" rel="stylesheet" />
   <link href="https://invest.jakarta.go.id/front\css\custom.css?v=13032024155158" rel="stylesheet" />
   <link href="https://invest.jakarta.go.id/front\css\animate.min.css" rel="stylesheet" />
-  <!--<link href="https://invest.jakarta.go.id/front\css\font-awesome.min.css" rel="stylesheet">-->
+  <link href="https://invest.jakarta.go.id/front\css\font-awesome.min.css" rel="stylesheet">
   <link href="https://invest.jakarta.go.id/front\fontawesome-free-5.15.3-web\css\all.css" rel="stylesheet" />
   <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg=""></script>
   <!-- slider -->
@@ -99,8 +64,7 @@ $conn->close();
   <link href="https://invest.jakarta.go.id/front\flag-icon-css-master\css\flag-icon.css" rel="stylesheet" />
 
   <!-- style -->
-  <link rel="stylesheet" href="../public/style/style.css">
-
+  <link rel="stylesheet" href="style/style.css">
   <!-- Highchart -->
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -111,16 +75,9 @@ $conn->close();
   <!-- Highchart -->
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" type="text/css" href="https://invest.jakarta.go.id/front\flipbook\deploy\css\flipbook.style.css" />
   <!-- flipbook-->
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
-
-  <!-- CSS Fancybox -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <!-- JavaScript Fancybox -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -134,33 +91,125 @@ $conn->close();
       height: 100%;
     }
 
-    /* CSS untuk gambar siluet */
-    .silhouette {
-      filter: grayscale(10%) brightness(0%);
-      opacity: 0.1;
+    .main-list {
+      list-style-type: decimal;
+      margin-bottom: 20px;
     }
 
-    /* CSS untuk gambar burung kecil */
-    .bird-small {
-      position: absolute;
-      bottom: 30px;
-      /* Sesuaikan dengan posisi yang diinginkan */
-      right: 30px;
-      /* Sesuaikan dengan posisi yang diinginkan */
+    .sub-list {
+      list-style-type: lower-alpha;
+    }
+
+    @media (max-width: 767px) {
+
+      /* Adjust navbar styles for smaller screens */
+      .navbar-collapse {
+        background-color: #000;
+        /* Change background color for better visibility */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 1000;
+        /* Ensure it's above other content */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .navbar-collapse.show {
+        transform: translateY(0%);
+      }
+
+      .navbar-nav {
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 20px 0;
+      }
+
+      .navbar-nav .nav-link {
+        padding: 10px;
+        color: #fff;
+      }
+
+      /* Adjust header height */
+      .jumbotron {
+        padding: 2rem 1rem;
+      }
+
+      /* Adjust font sizes */
+      .title-3 {
+        font-size: 24px;
+      }
+
+      /* Adjust speaker cards */
+      .px-2 {
+        width: 100%;
+      }
+
+      .grayscale {
+        height: auto;
+      }
+
+      /* Adjust footer layout */
+      .text-footer {
+        margin-top: 20px;
+      }
+
+      .img-responsive {
+        max-width: 100%;
+        height: auto;
+      }
     }
   </style>
   <style>
-    .swal2-popup {
-      font-size: 0.875rem;
-      /* Ubah sesuai kebutuhan */
+    /*
+  .owl-carousel .exhibiz {
+  position: relative;
+  height: 100%;
+  }
+  .owl-carousel .exhibiz div:not(.owl-controls) {
+  height: 100%;
+  }*/
+  </style>
+
+  <style>
+    .jifBanner {
+      background-size: cover;
+      /* Menyesuaikan ukuran gambar dengan ukuran elemen */
+      background-position: center;
+      /* Memposisikan gambar ke tengah */
+      height: 100vh;
+      /* Mengatur ketinggian gambar agar sesuai dengan tinggi layar */
     }
 
-    .custom-popup-class {
-      font-size: 0.875rem;
-      /* Ubah sesuai kebutuhan */
-    }
+    /* Mengubah proporsi atau ukuran gambar pada perangkat dengan lebar layar maksimum 768px (misalnya, perangkat tablet dan smartphone dalam orientasi potret) */
+    @media only screen and (max-width: 768px) {
+      .jifBanner {
+        height: 50vh;
+        /* Mengatur ketinggian gambar agar setengah tinggi layar */
+        margin-top: 65px;
+      }
 
-    @media (min-width: 768px) {
+      #about {
+        margin-top: -350px;
+      }
+
+      #speakers {
+        margin-top: -100px;
+      }
+
+      #schedule {
+        margin-top: -90px;
+      }
+
+      #schedule-assets {
+        margin-top: -75px;
+      }
 
       .img-responsive {
         margin-top: -50px;
@@ -170,36 +219,39 @@ $conn->close();
         margin-right: auto;
         display: block;
       }
-
-      .img-container {
-        text-align: center;
-      }
-
-      .img-container img {
-        max-width: 70%;
-        display: inline-block;
-      }
     }
 
-    @media (max-width: 767px) {
-      .img-container img {
-        max-width: 100%;
-      }
-    }
-
+    /* Mengubah proporsi atau ukuran gambar pada perangkat dengan lebar layar maksimum 576px (misalnya, smartphone dalam orientasi potret) */
     @media only screen and (max-width: 576px) {
       .jifBanner {
-        height: 35vh;
+        height: 40vh;
         /* Mengatur ketinggian gambar agar lebih kecil */
         margin-top: 65px;
       }
 
-      #ticket {
-        margin-top: -680px;
+      #about {
+        margin-top: -420px;
       }
 
-      #registration {
-        margin-top: -290px;
+      #speakers {
+        margin-top: -100px;
+      }
+
+      #schedule {
+        margin-top: -110px;
+      }
+
+      #schedule-assets {
+        margin-top: -95px;
+      }
+
+      .img-responsive {
+        margin-top: -30px;
+        width: auto;
+        height: 275px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     }
   </style>
@@ -208,14 +260,14 @@ $conn->close();
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
     <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+      <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
+        <span class="navbar-toggler-icon"><img src="assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto menu">
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">About</a>
+            <a class="nav-link px-md-3" href="landing_page.php">About</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
@@ -231,15 +283,14 @@ $conn->close();
               Language
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
-              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="assets/united-states.png" alt="EN flag" width="20"> English</a>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
   <script>
     // Hide Header on on scroll down
     var didScroll;
@@ -301,10 +352,6 @@ $conn->close();
       lastScrollTop = st;
     }
   </script>
-
-  <!-- slider -->
-  <link href="https://invest.jakarta.go.id/front\OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css" rel="stylesheet" />
-  <link href="https://invest.jakarta.go.id/front\OwlCarousel2-2.3.4\dist\assets\owl.carousel.min.css" rel="stylesheet" /><!-- slider -->
   <div id="loader-wrapper">
     <div class="circle justify-content-center d-flex align-items-center h-100">
       <img src="assets/LOGO INAMICE HKI 1;1.png" class="img-item" alt="" style="max-width: 250px; width: 100%" />
@@ -312,7 +359,7 @@ $conn->close();
   </div>
   <div id="home" class="h-100">
     <div class="jifBanner" style="
-          background-image: url(../assets/konten-feeds.png);
+          background-image: url(assets/konten-feeds.png);
         ">
     </div>
   </div>
@@ -395,120 +442,67 @@ $conn->close();
           "HAPPENING NOW";
         document.getElementsByClassName("greetings")[0].classList.add("pb-5");
       }
-
-      //document.getElementsByClassName('greetings')[0].innerHTML = days;       exit();
-      /*if(days==0 && distance < 0){
-        clearInterval(x);
-        document.getElementsByClassName('timer')[0].innerHTML = '';
-        document.getElementsByClassName('countdown')[0].innerHTML = '';            
-        document.getElementsByClassName('greetings')[0].innerHTML = 'HAPPENING NOW';            
-        document.getElementsByClassName('greetings')[0].classList.add('pb-5');
-    }else if(days < 0 && distance < 0){
-        clearInterval(x);
-        document.getElementsByClassName('timer')[0].innerHTML = '';
-        document.getElementsByClassName('countdown')[0].innerHTML = '';            
-        document.getElementsByClassName('greetings')[0].innerHTML = '';
-    }*/
     }, 1000);
   </script>
 
-  <div class="container py-5 mt-5">
-    <div class="row">
-      <div class="col">
-        <div class="img-container">
-          <a href="../assets/ticket.PNG" data-fancybox>
-            <img src="../assets/ticket.PNG" alt="" id="ticket" class="img-fluid">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Start Registration Form -->
-  <div id="registration" class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="row align-items-center mb-4">
-          <div class="col-md-3 col-6 d-flex align-items-center">
-            <h2 class="title-3 text-dark font-weight-bold" id="Title">Registration</h2>
-            <img class="img-fluid ml-2" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
-          </div>
-        </div>
+  <div id="about" class="container py-5">
+    <div class="row justify-content-center pt-5">
+      <div class="col-sm-10">
+        <h1 style="text-align: center;">Tata Cara</h1>
         <hr>
         <div class="row">
-          <div class="col-md-6 d-none d-md-block position-relative">
-            <!-- Gambar Burung Besar (Siluet) -->
-            <img class="img-fluid silhouette" src="../assets/elements/iconBurung.png" style="max-width: 100%; height: auto; " />
-
-            <!-- Gambar Burung Kecil (Warna Asli) -->
-            <img class="img-fluid bird-small" src="../assets/elements/iconBurung.png" alt="Small Bird" style="max-width: 40%; height: auto;" />
-          </div>
-          <div class="col-md-6">
-            <div class="py-4 text-black text-center">
-              <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
-            </div>
-            <form id="registrasi" name="registrasi" method="post" action="onsite_regist.php">
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="nama_lengkap">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required />
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="main-list">
+                  <li>Membuka website <a href="https://inamice.id/" style>inamice.id</a></li>
+                  <li>Klik garis tiga di kanan atas</li>
+                  <li>Klik section "Registration"</li>
+                  <li>Memilih jenis attendance
+                    <ul class="sub-list" style="list-style: disc;">
+                      <li>Note</li>
+                      <li style="list-style: none;">Peserta dapat hadir secara Onsite dan Online</li>
+                    </ul>
+                  </li>
+                  <li>Ketika peserta memilih Onsite maka akan dilanjutkan dengan proses pengisian data diantaranya:
+                    <ul class="sub-list" style="list-style:decimal;">
+                      <li>Mengisi data diri</li>
+                      <li>Mengisi data CHSE</li>
+                      <li>Pilih metode pembayaran</li>
+                      <li>Unggah bukti pembayaran</li>
+                      <li>Klik “daftar"</li>
+                      <li>Mendapatkan confirmation email.</li>
+                    </ul>
+                  </li>
+                  <li>Untuk peserta yang memiliki jenis attendance Online, maka akan dilanjutkan dengan proses pengisian data diantaranya:
+                    <ul class="sub-list" style="list-style:decimal;">
+                      <li>Mengisi data diri</li>
+                      <li>Pilih metode pembayaran</li>
+                      <li>Unggah bukti pembayaran</li>
+                      <li>Klik “daftar"</li>
+                      <li>Mendapatkan confirmation email.</li>
+                      <li>Zoom meeting akan diberikan H-7 acara INAMICE.</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="gender">Jenis Kelamin</label>
-                <select id="gender" name="gender" class="form-control">
-                  <option value="" disabled selected hidden>Pilih Jenis Kelamin Anda</option>
-                  <option>Pria</option>
-                  <option>Wanita</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="hp">Nomor Telepon</label>
-                <input type="text" class="form-control" id="hp" name="hp" required />
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="mail">Email</label>
-                <input type="email" class="form-control" id="mail" name="mail" required />
-                <div class="invalid-feedback">Invalid email</div>
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="alamat">Alamat</label>
-                <input type="text" class="form-control" id="alamat" name="alamat" required />
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="pekerjaan">Pekerjaan</label>
-                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" autocomplete="off" />
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="nama_organisasi">Organisasi/Perusahaan/Institusi</label>
-                <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" autocomplete="off" />
-              </div>
-              <div class="mb-3">
-                <label class="font-weight-bold" id="fieldTitle" for="kategori">Kategori</label>
-                <select id="kategori" name="kategori" class="form-control">
-                  <option value="" disabled selected hidden>Pilih Kategori Anda</option>
-                  <option value="onsite">Onsite</option>
-                </select>
-              </div>
-              <div class="mb-3 text-center">
-                <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" id="btnTitle">Selanjutnya</button>
-              </div>
-            </form>
-            <div class="bg-solid-9 py-3 px-5 text-center">
-              <p id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- End Registration Form -->
-
+  </div>
+  
   <div class="jumbotron m-0 footer-text bg-solid-2 rounded-0 py-0">
     <div class="container py-4">
       <footer>
         <div class="row justify-content-center">
           <div class="col-12 text-left py-4">
-            <a class="navbar-brand footer"><img src="../assets/IMG_5581.PNG" height="150px" alt="" /></a>
+            <a class="navbar-brand footer"><img src="assets/IMG_5581.PNG" height="150px" alt="" /></a>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -531,7 +525,7 @@ $conn->close();
               Register
             </div>
             <div class="py-1">
-              <small><a class="" href="../how_to.php">How to Register</a></small>
+              <small><a class="" href="how_to.php">How to Register</a></small>
             </div>
             <div class="py-1">
               <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>
@@ -575,14 +569,14 @@ $conn->close();
           <div class="col-12 col-md-2 text-left text-md-right align-self-center">
           </div>
           <div class="col-12 col-md-3 text-center py-2">
-            <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+            <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="https://www.tiktok.com/@inamice2024?_t=8ljXtnqOTWq&_r=1"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/tiktok.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+            <a target="_blank" href="https://www.tiktok.com/@inamice2024?_t=8ljXtnqOTWq&_r=1"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/tiktok.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
             <a target="_blank" href="https://www.linkedin.com/company/inamice/">
-              <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+              <span class="fa-stack fa-lg sosmed" style="background-image: url('assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+            <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
           </div>
         </div>
@@ -594,20 +588,346 @@ $conn->close();
       </footer>
     </div>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".exhibiz").owlCarousel({
+        autoplay: true,
+        nav: false,
+        loop: true,
+        //autoHeight:false,
+        lazyLoad: false,
+        smartSpeed: 2000,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 1
+          },
+          426: {
+            items: 1
+          },
+          1000: {
+            items: 1,
+            mouseDrag: false
+          },
+        },
+        navText: [
+          "<i class='fa fa-chevron-left'></i>",
+          "<i class='fa fa-chevron-right'></i>",
+        ],
+      });
 
-  <script>
-    $.ajax({
-      type: "post",
-      url: "/registrasi",
-      data: data,
-      success: function(respon) {
-        // Redirect ke halaman lain setelah formulir disubmit
-        window.location.href = "registration.php"; // Ganti "sukses.php" dengan halaman tujuan
-      },
-      error: function(error) {
-        console.log("error");
-      },
+      $(".partner").owlCarousel({
+        /*autoplay:true,
+        //nav:true,
+        loop:false,
+        autoHeight:false,
+        lazyLoad:true,
+        autoWidth:true,
+        center:false,
+        smartSpeed: 1500,
+        margin:0,
+        /*responsive:{
+            0:{items:1},
+            425:{items:1},
+            426:{items:2},       
+            768:{items:3},
+            1000:{items:4},
+            1100:{items:5}
+        },*/
+        autoplay: true,
+        autoPlayTimeout: 100,
+        autoplaySpeed: 6000,
+        nav: false,
+        autoHeight: true,
+        lazyLoad: true,
+        //smartSpeed: 1500,
+        loop: true,
+        margin: 0,
+        navText: [
+          "<i class='fas fa-caret-left fa-2x text-secondary' style='margin:3 5 0 0'></i>",
+          "<i class='fas fa-caret-right fa-2x text-secondary' style='margin:3 0 0 5'></i>",
+        ],
+      });
+      $(".speakers").owlCarousel({
+        autoplay: false,
+        nav: true,
+        autoHeight: true,
+        lazyLoad: true,
+        smartSpeed: 1500,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 1
+          },
+          426: {
+            items: 2
+          },
+          768: {
+            items: 3
+          },
+          1000: {
+            items: 4,
+            mouseDrag: false
+          },
+          1100: {
+            items: 4,
+            mouseDrag: false
+          },
+        },
+        navText: [
+          "<i class='fas fa-caret-left fa-2x text-secondary' style='margin:3 5 0 0'></i>",
+          "<i class='fas fa-caret-right fa-2x text-secondary' style='margin:3 0 0 5'></i>",
+        ],
+      });
+      $(".leaders").owlCarousel({
+        autoplay: false,
+        nav: true,
+        autoHeight: true,
+        lazyLoad: true,
+        smartSpeed: 1500,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 1
+          },
+          426: {
+            items: 2
+          },
+          768: {
+            items: 3
+          },
+          1000: {
+            items: 4,
+            mouseDrag: false
+          },
+          1100: {
+            items: 5,
+            mouseDrag: false
+          },
+        },
+        navText: [
+          "<i class='fas fa-caret-left fa-2x text-secondary' style='margin:3 5 0 0'></i>",
+          "<i class='fas fa-caret-right fa-2x text-secondary' style='margin:3 0 0 5'></i>",
+        ],
+      });
+
+      $(".projects").owlCarousel({
+        autoplay: false,
+        nav: true,
+        autoHeight: true,
+        lazyLoad: true,
+        smartSpeed: 1500,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 1
+          },
+          426: {
+            items: 2
+          },
+          768: {
+            items: 2
+          },
+          1000: {
+            items: 3,
+            mouseDrag: false
+          },
+          1100: {
+            items: 3,
+            mouseDrag: false
+          },
+        },
+        navText: [
+          "<i class='fas fa-caret-left fa-2x text-secondary' style='margin:3 5 0 0'></i>",
+          "<i class='fas fa-caret-right fa-2x text-secondary' style='margin:3 0 0 5'></i>",
+        ],
+      });
     });
+
+    $("#registrasi").on("submit", function(e) {
+      e.preventDefault();
+      var data = $("#registrasi").serialize();
+
+      validInput("firstName");
+      validInput("lastName");
+      validInput("hp");
+      validInput("company");
+      validEmail("mail");
+      validPwd("pwd");
+      validPwdR("pwd", "repassword");
+      validInput("bidang");
+      validSelect("sectors");
+
+      $.ajax({
+        type: "post",
+        url: "/registrasi",
+        data: data,
+        success: function(respon) {
+          console.log("success");
+          $("#responModal").modal("show");
+          $("#respon").html(respon);
+        },
+        error: function(error) {
+          console.log("error");
+        },
+      });
+    });
+
+    $("#loginjif").on("submit", function(e) {
+      e.preventDefault();
+      var data = $("#loginjif").serialize();
+
+      validEmail("email");
+      validPwd("password");
+
+      $.ajax({
+        type: "post",
+        url: "/loginjif",
+        data: data,
+        success: function(respon) {
+          location.reload();
+          console.log("success");
+          //swal("", respon, "success");
+        },
+        error: function(error) {
+          console.log("error");
+        },
+      });
+    });
+
+    function join(id, speakers) {
+      $.ajaxSetup({
+        headers: {
+          "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+      });
+      $data = {
+        _token: $("input[name = _token]").val(),
+        id: id,
+      };
+      $.ajax({
+        type: "GET",
+        url: "/join/" + id + "/" + speakers,
+        data: $data,
+        success: function(respon) {
+          if (respon.valid) {
+            //window.location.href=respon.link;
+            let a = document.createElement("a");
+            a.target = "_blank";
+            a.href = respon.link;
+            a.click();
+          } else {
+            $("#responModal").modal("show");
+            $("#respon").html(respon);
+            console.log("success");
+            //swal("", respon, "success");
+          }
+        },
+        error: function(error) {
+          console.log("error");
+        },
+      });
+    }
+
+    $("#resetjif").on("submit", function(e) {
+      e.preventDefault();
+      var data = $("#resetjif").serialize();
+
+      validEmail("email_recovery");
+
+      $.ajax({
+        type: "post",
+        url: "/resetjif",
+        data: data,
+        success: function(respon) {
+          $("#resetModal").modal("hide");
+          $("#responModal").modal("show");
+          $("#respon").html(respon);
+          console.log("success");
+          //swal("", respon, "success");
+        },
+        error: function(error) {
+          console.log("error");
+        },
+      });
+    });
+
+    function reverse() {
+      $("#loginModal").modal("hide");
+      $("#resetModal").modal("show");
+      $("#email_recovery").val("");
+    }
+
+    $(".gas").owlCarousel({
+      margin: 10,
+      loop: false,
+      autoWidth: true,
+      items: 4,
+    });
+
+    $(".one_sesi").click(function() {
+      $(".two_sesi").removeClass("active");
+      $(".two_sesi").attr("checked", false);
+    });
+
+    $(".two_sesi").click(function() {
+      $(".one_sesi").removeClass("active");
+      $(".one_sesi").attr("checked", false);
+    });
+
+    $(".induk").on("click", function() {
+      $(".anak-anak").removeClass("active").removeClass("show");
+      $(".anak").find(":first").addClass("active");
+      //$('.nav-21').addClass('active');
+    });
+
+    $(".nav-tabs a").click(function() {
+      $(this).tab("show");
+    });
+
+    $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+      var previousActiveTab = $(e.relatedTarget).attr("data-second") + "1";
+      var newlyActiveTab = $(e.target).attr("data-second") + "1";
+
+      $("." + previousActiveTab).removeClass("active");
+      $("." + newlyActiveTab).addClass("active");
+    });
+  </script>
+  <script>
+    /*$(document).ready(function(){    
+            owlCarousel('partner',5);
+        });   
+
+        function owlCarousel(element,default_item){
+            $('.'+element).owlCarousel({        
+                autoplay:false,
+                nav:true,     
+                autoHeight:false,
+                lazyLoad:true,
+                smartSpeed: 2000,
+                margin:0,
+                responsive:{
+                    0:{items:1},
+                    425:{items:1},
+                    426:{items:2},       
+                    768:{items:3},
+                    1000:{items:default_item,mouseDrag:false},            
+                },
+                navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+            });
+        }*/
   </script>
   <script>
     $(function() {
@@ -715,27 +1035,7 @@ $conn->close();
     });
   </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Periksa apakah parameter query string success diatur
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('success') && urlParams.get('success') === 'true') {
-        // Tampilkan popup notifikasi SweetAlert2
-        Swal.fire({
-          title: 'Congratulations! You Have Successfully Registered for this Event',
-          icon: 'success',
-          showCloseButton: true,
-          showConfirmButton: false,
-          customClass: {
-            popup: 'custom-popup-class' // Nama kelas CSS khusus untuk notifikasi
-          }
-        });
-      }
-    });
-  </script>
-
-
-  <script src="../public/js/id_eng1.js"></script>
+  <script src="public/js/id_eng.js"></script>
 </body>
 
 </html>

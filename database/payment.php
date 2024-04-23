@@ -518,7 +518,7 @@ $conn->close();
               Register
             </div>
             <div class="py-1">
-              <small><a class="" href="#exhibition1">How to Register</a></small>
+              <small><a class="" href="../how_to.php">How to Register</a></small>
             </div>
             <div class="py-1">
               <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>
