@@ -47,6 +47,7 @@
   <link href="https://invest.jakarta.go.id/front\css\animate.min.css" rel="stylesheet" />
   <link href="https://invest.jakarta.go.id/front\css\font-awesome.min.css" rel="stylesheet">
   <link href="https://invest.jakarta.go.id/front\fontawesome-free-5.15.3-web\css\all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg=""></script>
   <!-- slider -->
   <link href="https://invest.jakarta.go.id/front\OwlCarousel2-2.3.4\dist\assets\owl.carousel.min.css" rel="stylesheet" />
@@ -469,10 +470,10 @@
               INAMICE merupakan agenda rutin yang dilaksanakan oleh Politeknik Negeri Jakarta dengan dukungan Kementerian Pariwisata dan Asosiasi Industri MICE sebagai sebuah forum pertemuan antara dunia industri, akademisi, pemerintah dan berbagai lingkup stakeholder Industri MICE untuk membahas tema-tema aktual ataupun perkembangan industri MICE di tiap tahunnya. INAMICE telah diselenggarakan sejak tahun 2014 dan <strong>di tahun 2024 ini merupakan penyelenggaraan ke-7 dengan tema besar membahas mengenai reposisi Jakarta.</strong>
             </p>
             <p id="aboutContent" style="text-align: justify; line-height: 150%">
-            Pada tanggal 18 Januari 2022 RUU tentang Ibu Kota Negara (IKN) menjadi UU oleh DPR RI dan Pemerintah. Dengan demikian, Indonesia akan mempunyai IKN yang baru menggantikan Jakarta. Perpindahan Ibu Kota dari Jakarta ke IKN mengharuskan Kota Jakarta melakukan rebranding dengan berbagai tantangan besar untuk Kota Jakarta menjadi kota global dan tetap menjadi pusat pertumbuhan ekonomi Indonesia. Melihat hal itu, Pemerintah Provinsi (Pemprov) DKI Jakarta sedang menggiatkan sejumlah sektor untuk mempersiapkan Kota Jakarta, salah satu sektor yang menjadi fokus adalah sektor pariwisata yang sedang digiatkan untuk menjadikan re-branding Jakarta sebagai kota dengan industri pariwisata dan MICE (Meeting, Incentive, Conference, Exhibition) berstandar internasional.
+              Pada tanggal 18 Januari 2022 RUU tentang Ibu Kota Negara (IKN) menjadi UU oleh DPR RI dan Pemerintah. Dengan demikian, Indonesia akan mempunyai IKN yang baru menggantikan Jakarta. Perpindahan Ibu Kota dari Jakarta ke IKN mengharuskan Kota Jakarta melakukan rebranding dengan berbagai tantangan besar untuk Kota Jakarta menjadi kota global dan tetap menjadi pusat pertumbuhan ekonomi Indonesia. Melihat hal itu, Pemerintah Provinsi (Pemprov) DKI Jakarta sedang menggiatkan sejumlah sektor untuk mempersiapkan Kota Jakarta, salah satu sektor yang menjadi fokus adalah sektor pariwisata yang sedang digiatkan untuk menjadikan re-branding Jakarta sebagai kota dengan industri pariwisata dan MICE (Meeting, Incentive, Conference, Exhibition) berstandar internasional.
             </p>
             <p id="aboutContent" style="text-align: justify; line-height: 150%">
-            Selain itu, Jakarta sebagai melting point, memiliki peluang strategis sebagai pusat bisnis dan destinasi wisata MICE. Dengan keunggulan yang dimiliki seperti infrastruktur yang memadai, dan fasilitas konvensi yang berkualitas, kota Jakarta memiliki potensi besar untuk menjadi destinasi bagi acara-acara MICE internasional. Melalui INAMICE 2024 yang mengusung tema <strong>“Reposisi Jakarta Menjadi Destinasi Wisata Bisnis Global Unggulan”</strong> dapat mengambil peran penting dalam menggerakan perubahan dan penyesuaian terhadap citra, posisi, atau identitas Jakarta sebagai destinasi bisnis khususnya dalam industri MICE untuk dapat bersaing dan menguasai pasar global melalui program yang disusun untuk mengkritisi isu-isu yang terjadi.
+              Selain itu, Jakarta sebagai melting point, memiliki peluang strategis sebagai pusat bisnis dan destinasi wisata MICE. Dengan keunggulan yang dimiliki seperti infrastruktur yang memadai, dan fasilitas konvensi yang berkualitas, kota Jakarta memiliki potensi besar untuk menjadi destinasi bagi acara-acara MICE internasional. Melalui INAMICE 2024 yang mengusung tema <strong>“Reposisi Jakarta Menjadi Destinasi Wisata Bisnis Global Unggulan”</strong> dapat mengambil peran penting dalam menggerakan perubahan dan penyesuaian terhadap citra, posisi, atau identitas Jakarta sebagai destinasi bisnis khususnya dalam industri MICE untuk dapat bersaing dan menguasai pasar global melalui program yang disusun untuk mengkritisi isu-isu yang terjadi.
             </p>
             <!--</div>-->
           </div>
@@ -546,7 +547,7 @@
                         <b class="text-green-old">DR. Iqbal Alan Abdullah, MSC, SMMC<strong> *</strong></b>
                         <p>
                           <small>Ketua Umum INCCA</small>
-                          <p><small><strong>*To Be Confirm</strong></small></p>
+                        <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -559,7 +560,7 @@
                         <b class="text-green-old">Andhika Permata<strong> *</strong></b>
                         <p>
                           <small>Kepala Disparekraf DKI Jakarta</small>
-                          <p><small><strong>*To Be Confirm</strong></small></p>
+                        <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -597,7 +598,7 @@
                         <b class="text-green-old">Hariyanto<strong> *</strong></b>
                         <p>
                           <small>Deputi Bidang Pengembangan Destinasi dan Infrastruktur</small>
-                          <p><small><strong>*To Be Confirm</strong></small></p>
+                        <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -610,7 +611,7 @@
                         <b class="text-green-old">Hermawan Kartajaya S.E, M.B.A<strong> *</strong></b>
                         <p>
                           <small>Founder & Chairman Markplus</small>
-                          <p><small><strong>*To Be Confirm</strong></small></p>
+                        <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -725,13 +726,12 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-sm-2 text-left">
+          <div class="col-12 col-md-3 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
               INAMICE 2024
             </div>
             <div class="py-1">
-              <small><a class="" href="#about">
-                  About</a></small>
+              <small><a class="" href="#about">About</a></small>
             </div>
             <div class="py-1">
               <small><a class="" href="#speakers">Speakers</a></small>
@@ -740,7 +740,7 @@
               <small><a class="" href="#schedule">Schedule</a></small>
             </div>
           </div>
-          <div class="col-12 col-sm-2 text-left">
+          <div class="col-12 col-md-3 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
               Register
             </div>
@@ -751,55 +751,50 @@
               <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>
             </div>
             <div class="py-1">
-              <small><a class="" href="#exhibition2">CHSE</a></small>
-            </div>
-            <div class="py-1">
               <small><a class="" href="#exhibition2">Cancellation</a></small>
             </div>
           </div>
-          <div class="col-12 col-sm-2 text-left">
+          <div class="col-12 col-md-3 text-left">
             <div class="font-weight-bold pb-3 pt-5 text-footer">
+              Contact
+            </div>
+            <div class="py-1">
+              <small>+62 859-7503-0624</small>
+              <small>info.inamice@bisnis.pnj.ac.id</small>
             </div>
           </div>
-          <div class="col-12 col-sm-3 text-left">
-            <div class="font-weight-bold pb-3 pt-5 text-footer">
-            </div>
-          </div>
-          <div class="col-12 col-sm-3 text-left align-self-center mt-5 mt-sm-0">
+          <div class="col-12 col-md-3 text-left">
             <form id="subscribe" name="subscribe">
               <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
               <div class="form-group row">
-                <div class="col-sm-10 text-left">
-                  <small>Do not miss our latest business
-                    opportunity updates.</small>
+                <div class="col-12 text-left">
+                  <small>Do not miss our latest business opportunity updates.</small>
                 </div>
               </div>
               <div class="input-group mb-3">
                 <input type="email" id="email_subscribe" name="email_subscribe" class="form-control rounded-pills" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 <div class="invalid-feedback text-white">Invalid email</div>
                 <div class="input-group-append">
-                  <button type="submit" class="btn sosmed text-white btn-subscribe">
-                    Submit
-                  </button>
+                  <button type="submit" class="btn sosmed text-white btn-subscribe">Submit</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-sm-6 text-left text-sm-right align-self-center">
+          <div class="col-12 col-md-6 text-left text-md-right align-self-center">
           </div>
-          <div class="col-12 col-sm-2 text-left text-sm-right align-self-center">
+          <div class="col-12 col-md-2 text-left text-md-right align-self-center">
             <div class="font-weight-bold py-3">
               <a>Contact Us</a>
             </div>
           </div>
-          <div class="col-12 col-sm-4 text-center py-3">
+          <div class="col-12 col-md-4 text-center py-3">
             <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+            <a target="_blank" href="https://www.tiktok.com/@inamice2024?_t=8ljXtnqOTWq&_r=1"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/tiktok.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
-            <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
+            <a target="_blank" href="https://www.linkedin.com/company/inamice/">
               <span class="fa-stack fa-lg sosmed" style="background-image: url('assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
             <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
@@ -814,6 +809,7 @@
       </footer>
     </div>
   </div>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $(".exhibiz").owlCarousel({
