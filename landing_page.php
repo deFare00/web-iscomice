@@ -21,8 +21,8 @@
   <meta name="title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
   <meta name="description" content="Repositioning Jakarta to Become a Leading Global Business Tourism Destination" />
   <meta name="keywords" content="Indonesia Mice Conference And Exhibition" />
-  <link rel="canonical" href="https://invest.jakarta.go.id/jakarta-investment-forum" />
-  <meta property="og:url" content="https://invest.jakarta.go.id/jakarta-investment-forum" />
+  <link rel="canonical" href="https://inamice.id" />
+  <meta property="og:url" content="https://inamice.id" />
   <meta property="og:locale" content="en_EN" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Indonesia Mice Conference And Exhibition | INAMICE 2024" />
