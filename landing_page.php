@@ -78,7 +78,7 @@
   <link rel="stylesheet" type="text/css" href="https://invest.jakarta.go.id/front\flipbook\deploy\css\flipbook.style.css" />
   <!-- flipbook-->
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
-  
+
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <style>
@@ -202,7 +202,7 @@
         margin-top: -75px;
       }
 
-      .img-responsive{
+      .img-responsive {
         margin-top: -50px;
         width: auto;
         height: 500px;
@@ -453,7 +453,7 @@
         </div>
         <div class="row mt-5">
           <div class="col">
-            <p id="historyTitle"><strong>Sejarah INAMICE</strong></p>
+            <!-- <p id="historyTitle"><strong>Sejarah INAMICE</strong></p>
             <p id="historyContent">
               INAMICE adalah official brand convention yang diusung pertama kali oleh Ibu Christina L. Rudatin, Ketua Forum Program Studi (FPS) MICE Yang sekaligus dosen MICE Politeknik Negeri Jakarta.
             </p>
@@ -462,11 +462,17 @@
             </p>
             <p id="historyContent">
               Bekerjasama dengan Forum Program Studi (FPS) MICE Indonesia, Indonesia Congress and Convention Association (INCCA) dan Lembaga Sertifikasi Profesi (LSP) MICE, Politeknik Negeri Jakarta telah menyelenggarakan sebuah konvensi nasional yang ikut andil menjadi penentu masa depan sumber daya manusia negara Indonesia yang bergerak di bidang MICE dalam menghadapi masyarakat ekonomi ASEAN.
-            </p>
+            </p> -->
 
-            <p id="aboutTitle"><strong>Tentang INAMICE 2024</strong></p>
-            <p id="aboutContent">
-              INAMICE merupakan kegiatan yang diagendakan secara rutin dan dilaksanakan oleh Politeknik Negeri Jakarta sebagai sebuah forum pertemuan antara dunia industri, akademisi, pemerintah, dan berbagai lingkup stakeholder Industri MICE untuk membahas isu-isu aktual ataupun perkembangan industri MICE ditiap tahunnya. INAMICE telah diselenggarakan sejak tahun 2014 dan di tahun 2024 ini merupakan penyelenggaraan ke-7 dengan tema besar membahas mengenai reposisi Jakarta.
+            <p id="aboutTitle" style="font-size: 18px"><strong>Tentang INAMICE 2024</strong></p>
+            <p id="aboutContent" style="text-align: justify; line-height: 150%">
+              INAMICE merupakan agenda rutin yang dilaksanakan oleh Politeknik Negeri Jakarta dengan dukungan Kementerian Pariwisata dan Asosiasi Industri MICE sebagai sebuah forum pertemuan antara dunia industri, akademisi, pemerintah dan berbagai lingkup stakeholder Industri MICE untuk membahas tema-tema aktual ataupun perkembangan industri MICE di tiap tahunnya. INAMICE telah diselenggarakan sejak tahun 2014 dan <strong>di tahun 2024 ini merupakan penyelenggaraan ke-7 dengan tema besar membahas mengenai reposisi Jakarta.</strong>
+            </p>
+            <p id="aboutContent" style="text-align: justify; line-height: 150%">
+            Pada tanggal 18 Januari 2022 RUU tentang Ibu Kota Negara (IKN) menjadi UU oleh DPR RI dan Pemerintah. Dengan demikian, Indonesia akan mempunyai IKN yang baru menggantikan Jakarta. Perpindahan Ibu Kota dari Jakarta ke IKN mengharuskan Kota Jakarta melakukan rebranding dengan berbagai tantangan besar untuk Kota Jakarta menjadi kota global dan tetap menjadi pusat pertumbuhan ekonomi Indonesia. Melihat hal itu, Pemerintah Provinsi (Pemprov) DKI Jakarta sedang menggiatkan sejumlah sektor untuk mempersiapkan Kota Jakarta, salah satu sektor yang menjadi fokus adalah sektor pariwisata yang sedang digiatkan untuk menjadikan re-branding Jakarta sebagai kota dengan industri pariwisata dan MICE (Meeting, Incentive, Conference, Exhibition) berstandar internasional.
+            </p>
+            <p id="aboutContent" style="text-align: justify; line-height: 150%">
+            Selain itu, Jakarta sebagai melting point, memiliki peluang strategis sebagai pusat bisnis dan destinasi wisata MICE. Dengan keunggulan yang dimiliki seperti infrastruktur yang memadai, dan fasilitas konvensi yang berkualitas, kota Jakarta memiliki potensi besar untuk menjadi destinasi bagi acara-acara MICE internasional. Melalui INAMICE 2024 yang mengusung tema <strong>“Reposisi Jakarta Menjadi Destinasi Wisata Bisnis Global Unggulan”</strong> dapat mengambil peran penting dalam menggerakan perubahan dan penyesuaian terhadap citra, posisi, atau identitas Jakarta sebagai destinasi bisnis khususnya dalam industri MICE untuk dapat bersaing dan menguasai pasar global melalui program yang disusun untuk mengkritisi isu-isu yang terjadi.
             </p>
             <!--</div>-->
           </div>
@@ -503,11 +509,12 @@
                           <img class="rounded-circle" src="assets/sandiaga_uno.png" style="height: 130px; object-fit: cover ;border:1px solid black;" />
                         </div>
                         <br />
-                        <b class="text-green-old">Sandiaga Uno</b>
+                        <b class="text-green-old">Sandiaga Uno<strong> *</strong></b>
                         <p><small>Minister of Tourism and Creative Economy of the Republic of Indonesia</small></p>
+                        <p><small><strong>*To Be Confirm</strong></small></p>
                       </div>
                     </div>
-                    <div class="px-2 mb-4">
+                    <!-- <div class="px-2 mb-4">
                       <div style="height: 300px" class="grayscale">
                         <div class="mx-auto" style="width: 130px; height: 130px">
                           <img class="rounded-circle" src="assets/perry.jpg" style="height: 130px; object-fit: cover; border: 1px solid black;" />
@@ -518,7 +525,7 @@
                           <small>Governor of Bank Indonesia</small>
                         </p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -536,9 +543,10 @@
                           <img class="rounded-circle" src="assets/alan.jpg" style="height: 130px; object-fit: cover; border: 1px solid black;" />
                         </div>
                         <br />
-                        <b class="text-green-old">DR. Iqbal Alan Abdullah, MSC, SMMC</b>
+                        <b class="text-green-old">DR. Iqbal Alan Abdullah, MSC, SMMC<strong> *</strong></b>
                         <p>
                           <small>Ketua Umum INCCA</small>
+                          <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -548,10 +556,10 @@
                           <img class="rounded-circle" src="assets/andhika-permata.jpg" style="height: 130px; object-fit: cover; border: 1px solid black;" />
                         </div>
                         <br />
-                        <b class="text-green-old">Andhika Permata</b>
+                        <b class="text-green-old">Andhika Permata<strong> *</strong></b>
                         <p>
-                          <small>Kepala Disparekraf DKI Jakarta
-                          </small>
+                          <small>Kepala Disparekraf DKI Jakarta</small>
+                          <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -561,7 +569,7 @@
                           <img class="rounded-circle" src="assets/Gary-Grimmer.png" style="height: 130px; object-fit: cover; border: 1px solid black" />
                         </div>
                         <br />
-                        <b class="text-green-old">Gary Grimmer</b>
+                        <b class="text-green-old">Gary Grimmer<strong> *</strong></b>
                         <p>
                           <small>Executive Chairman GainingEdge</small>
                         </p>
@@ -586,9 +594,10 @@
                           <img class="rounded-circle" src="assets/hariyanto.jpeg" style="height: 130px; object-fit: cover; border: 1px solid black" />
                         </div>
                         <br />
-                        <b class="text-green-old">Hariyanto</b>
+                        <b class="text-green-old">Hariyanto<strong> *</strong></b>
                         <p>
                           <small>Deputi Bidang Pengembangan Destinasi dan Infrastruktur</small>
+                          <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -598,9 +607,10 @@
                           <img class="rounded-circle" src="assets/Hermawan_Kartajaya.jpg" style="height: 130px; object-fit: cover; border: 1px solid black" />
                         </div>
                         <br />
-                        <b class="text-green-old">Hermawan Kartajaya S.E, M.B.A</b>
+                        <b class="text-green-old">Hermawan Kartajaya S.E, M.B.A<strong> *</strong></b>
                         <p>
                           <small>Founder & Chairman Markplus</small>
+                          <p><small><strong>*To Be Confirm</strong></small></p>
                         </p>
                       </div>
                     </div>
@@ -666,8 +676,8 @@
   </div>
   </div>
 
-  <div class="bg-solid-2 p-3 text-center font-weight-bold">
-    In Collaboration With
+  <div class="bg-solid-2 p-3 text-center font-weight-bold" style="font-size: 20px">
+    Sponsorship
   </div>
 
   <div class="container">
@@ -678,6 +688,26 @@
             <div class="col justify-content-center d-flex align-items-center">
               <div class="d-flex align-items-center p-4">
                 <img src="assets/all_sponsor.png" class="img-fluid" style="max-height: 500px; object-fit: contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-solid-2 p-3 text-center font-weight-bold" style="font-size: 20px">
+    Media Partner
+  </div>
+
+  <div class="container">
+    <div class="py-5 justify-content-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col">
+          <div class="row justify-content-center">
+            <div class="col justify-content-center d-flex align-items-center">
+              <div class="d-flex align-items-center p-4">
+                <img src="assets/media.png" class="img-fluid" style="max-height: 500px; object-fit: contain" />
               </div>
             </div>
           </div>
