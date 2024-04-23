@@ -7,24 +7,41 @@ if (isset($_GET['user_id'])) {
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Ambil nilai dari formulir
-        $question1 = $_POST['question_1'];
-        $question2 = $_POST['question_2'];
-        $question3 = $_POST['question_3'];
-        $question4 = $_POST['question_4'];
-        $question5 = $_POST['question_5'];
-        $question6 = $_POST['question_6'];
+        $paymentMethod = $_POST['payment_method'];
 
-        // Query SQL untuk menyimpan data ke dalam tabel
-        $sql = "INSERT INTO user_chse (user_id, question_1, question_2, question_3, question_4, question_5, question_6) 
-                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6')";
+        // Periksa apakah file gambar telah diunggah
+        if (isset($_FILES['payment_proof']) && $_FILES['payment_proof']['error'] === UPLOAD_ERR_OK) {
+            // Direktori tempat Anda ingin menyimpan file gambar
+            $uploadDir = '../uploads/online/';
 
-        // Jalankan query dan periksa apakah berhasil
-        if ($conn->query($sql) === TRUE) {
-            // Redirect ke halaman lain setelah formulir disubmit
-            header("Location: payment.php?user_id=$user_id#registration"); // Ganti "sukses.php" dengan halaman tujuan
-            exit; // Pastikan tidak ada output lain sebelum redirect
+            // Mendapatkan informasi tentang file yang diunggah
+            $fileName = $_FILES['payment_proof']['name'];
+            $fileTempName = $_FILES['payment_proof']['tmp_name'];
+            $uploadFile = $uploadDir . basename($fileName);
+
+            // Pindahkan file yang diunggah ke direktori yang ditentukan
+            if (move_uploaded_file($fileTempName, $uploadFile)) {
+
+                // Path file gambar untuk disimpan dalam database
+                $paymentProofPath = $uploadFile;
+
+                // Query SQL untuk menyimpan data ke dalam tabel
+                $sql = "INSERT INTO online_user_payment (user_id, payment_method, payment_proof) 
+                        VALUES ('$user_id', '$paymentMethod', '$paymentProofPath')";
+
+                // Jalankan query dan periksa apakah berhasil
+                if ($conn->query($sql) === TRUE) {
+                    // Redirect ke halaman lain setelah formulir disubmit
+                    header("Location: registration_type.php?success=true"); // Ganti "sukses.php" dengan halaman tujuan
+                    exit; // Pastikan tidak ada output lain sebelum redirect
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+            } else {
+                echo "Error: Gagal mengunggah file.";
+            }
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: Tidak ada file yang diunggah atau terjadi kesalahan.";
         }
     }
 } else {
@@ -34,7 +51,6 @@ if (isset($_GET['user_id'])) {
 // Tutup koneksi ke database
 $conn->close();
 ?>
-
 
 
 <!DOCTYPE html>
@@ -144,7 +160,7 @@ $conn->close();
         /* CSS untuk gambar burung kecil */
         .bird-small {
             position: absolute;
-            bottom: 30px;
+            bottom: 20px;
             /* Sesuaikan dengan posisi yang diinginkan */
             right: 30px;
             /* Sesuaikan dengan posisi yang diinginkan */
@@ -182,7 +198,7 @@ $conn->close();
             .jifBanner {
                 height: 35vh;
                 /* Mengatur ketinggian gambar agar lebih kecil */
-                margin-top: 65px;
+                margin-top: 55px;
             }
 
             #ticket {
@@ -437,92 +453,29 @@ $conn->close();
                         <div class="py-4 text-black text-center">
                             <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
                         </div>
-                        <form id="registrasi" name="registrasi" method="post" action="chse.php?user_id=<?php echo $user_id; ?>">
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
+                        <form id="registrasi" name="registrasi" method="post" action="online_user_payment.php?user_id=<?php echo $user_id; ?>" enctype="multipart/form-data">
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label class="font-weight-bold" for="inputEmail4" id="fieldTitle">Metode Pembayaran</label>
+                                    <select id="payment_method" name="payment_method" class="form-control text-truncate">
+                                        <option value="" disabled selected hidden="" id="fieldTitle">
+                                            Pilih Metode Pembayaran Anda
+                                        </option>
+                                        <option value="Bank Transfer" id="fieldTitle">Transfer Antar Bank</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, kondisi kesehatan bagaimana yang perlu dipertimbangkan?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, obat apa yang memicu alergi Anda?</label>
-                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" />
+                                    <label class="font-weight-bold" id="fieldTitle">Unggah Bukti Pembayaran</label>
+                                    <input type="file" class="form-control-file" id="payment_proof" name="payment_proof" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col text-center">
                                     <br />
                                     <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
-                                        Selanjutnya
+                                        Daftar
                                     </button>
                                 </div>
                             </div>
@@ -748,7 +701,7 @@ $conn->close();
             });
         });
     </script>
-    <script src="../public/js/id_eng3.js"></script>
+    <script src="../public/js/id_eng4.js"></script>
 </body>
 
 </html>

@@ -262,7 +262,7 @@
             <a class="nav-link px-md-3" href="#about">About</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
+            <a class="nav-link px-md-3" href="database/registration_type.php">Registration</a>
           </li>
           <li class="nav-item hover-line active text-capitalize text-lg-center">
             <a class="nav-link px-md-3" href="#schedule">Schedule</a>
@@ -759,11 +759,13 @@
               Contact
             </div>
             <div class="py-1">
-              <small>+62 859-7503-0624</small>
-              <small>info.inamice@bisnis.pnj.ac.id</small>
+              <small><a href="tel:+6285975030624">+62 859-7503-0624</a></small>
+            </div>
+            <div class="py-1">
+              <small><a href="mailto:info.inamice@bisnis.pnj.ac.id">info.inamice@bisnis.pnj.ac.id</a></small>
             </div>
           </div>
-          <div class="col-12 col-md-3 text-left">
+          <div class="col-12 col-md-3 text-left py-3">
             <form id="subscribe" name="subscribe">
               <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
               <div class="form-group row">
@@ -785,11 +787,8 @@
           <div class="col-12 col-md-6 text-left text-md-right align-self-center">
           </div>
           <div class="col-12 col-md-2 text-left text-md-right align-self-center">
-            <div class="font-weight-bold py-3">
-              <a>Contact Us</a>
-            </div>
           </div>
-          <div class="col-12 col-md-4 text-center py-3">
+          <div class="col-12 col-md-3 text-center py-2">
             <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
              
             <a target="_blank" href="https://www.tiktok.com/@inamice2024?_t=8ljXtnqOTWq&_r=1"><span class="fa-stack fa-lg sosmed" style="background-image: url('assets/tiktok.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
@@ -802,7 +801,7 @@
           </div>
         </div>
         <hr class="bg-solid-8" />
-        <div>
+        <div style="text-align: center">
           <small>© Indonesia Mice Conference And Exhibition 2024<br />
             Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
         </div>

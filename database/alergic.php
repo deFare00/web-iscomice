@@ -560,13 +560,12 @@ $conn->close();
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-12 col-sm-2 text-left">
+                    <div class="col-12 col-md-3 text-left">
                         <div class="font-weight-bold pb-3 pt-5 text-footer">
                             INAMICE 2024
                         </div>
                         <div class="py-1">
-                            <small><a class="" href="#about">
-                                    About</a></small>
+                            <small><a class="" href="#about">About</a></small>
                         </div>
                         <div class="py-1">
                             <small><a class="" href="#speakers">Speakers</a></small>
@@ -575,7 +574,7 @@ $conn->close();
                             <small><a class="" href="#schedule">Schedule</a></small>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-2 text-left">
+                    <div class="col-12 col-md-3 text-left">
                         <div class="font-weight-bold pb-3 pt-5 text-footer">
                             Register
                         </div>
@@ -586,55 +585,49 @@ $conn->close();
                             <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>
                         </div>
                         <div class="py-1">
-                            <small><a class="" href="#exhibition2">CHSE</a></small>
-                        </div>
-                        <div class="py-1">
                             <small><a class="" href="#exhibition2">Cancellation</a></small>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-2 text-left">
+                    <div class="col-12 col-md-3 text-left">
                         <div class="font-weight-bold pb-3 pt-5 text-footer">
+                            Contact
+                        </div>
+                        <div class="py-1">
+                            <small><a href="tel:+6285975030624">+62 859-7503-0624</a></small>
+                        </div>
+                        <div class="py-1">
+                            <small><a href="mailto:info.inamice@bisnis.pnj.ac.id">info.inamice@bisnis.pnj.ac.id</a></small>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-3 text-left">
-                        <div class="font-weight-bold pb-3 pt-5 text-footer">
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 text-left align-self-center mt-5 mt-sm-0">
+                    <div class="col-12 col-md-3 text-left py-3">
                         <form id="subscribe" name="subscribe">
                             <input type="hidden" name="_token" value="8KutnrrrtXvrAWDhWnfSCzmjXKL39W24oLUo6yNB" />
                             <div class="form-group row">
-                                <div class="col-sm-10 text-left">
-                                    <small>Do not miss our latest business
-                                        opportunity updates.</small>
+                                <div class="col-12 text-left">
+                                    <small>Do not miss our latest business opportunity updates.</small>
                                 </div>
                             </div>
                             <div class="input-group mb-3">
                                 <input type="email" id="email_subscribe" name="email_subscribe" class="form-control rounded-pills" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                                 <div class="invalid-feedback text-white">Invalid email</div>
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn sosmed text-white btn-subscribe">
-                                        Submit
-                                    </button>
+                                    <button type="submit" class="btn sosmed text-white btn-subscribe">Submit</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-12 col-sm-6 text-left text-sm-right align-self-center">
+                    <div class="col-12 col-md-6 text-left text-md-right align-self-center">
                     </div>
-                    <div class="col-12 col-sm-2 text-left text-sm-right align-self-center">
-                        <div class="font-weight-bold py-3">
-                            <a>Contact Us</a>
-                        </div>
+                    <div class="col-12 col-md-2 text-left text-md-right align-self-center">
                     </div>
-                    <div class="col-12 col-sm-4 text-center py-3">
+                    <div class="col-12 col-md-3 text-center py-2">
                         <a target="" href="https://www.instagram.com/inamice2024/"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/instagram.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="https://twitter.com/jic_jakarta"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/twitter.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
+                        <a target="_blank" href="https://www.tiktok.com/@inamice2024?_t=8ljXtnqOTWq&_r=1"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/tiktok.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
-                        <a target="_blank" href="https://www.linkedin.com/company/jakartainvestmentcentre/">
+                        <a target="_blank" href="https://www.linkedin.com/company/inamice/">
                             <span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/linkedin.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
                          
                         <a target="_blank" href="mailto:info.inamice@bisnis.pnj.ac.id"><span class="fa-stack fa-lg sosmed" style="background-image: url('../assets/mail.svg'); background-size: contain; background-repeat: no-repeat; width: 45px; height: 45px; border-radius: 10px;"> </span></a>
@@ -642,7 +635,7 @@ $conn->close();
                     </div>
                 </div>
                 <hr class="bg-solid-8" />
-                <div>
+                <div style="text-align: center">
                     <small>© Indonesia Mice Conference And Exhibition 2024<br />
                         Jl. Prof. DR. G.A. Siwabessy, Kampus Universitas Indonesia Depok 16425</small>
                 </div>

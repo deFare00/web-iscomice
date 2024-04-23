@@ -1,41 +1,37 @@
 <?php
 include 'connection.php';
 
-// Periksa apakah user_id telah diterima dari URL
-if (isset($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil nilai dari formulir
+    $fullName = $_POST['nama_lengkap'];
+    $gender = $_POST['gender'];
+    $phoneNumber = $_POST['hp'];
+    $email = $_POST['mail'];
+    $alamat = $_POST['alamat'];
+    $pekerjaan = $_POST['pekerjaan'];
+    $namaOrganisasi = $_POST['nama_organisasi'];
+    $kategori = $_POST['kategori'];
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Ambil nilai dari formulir
-        $question1 = $_POST['question_1'];
-        $question2 = $_POST['question_2'];
-        $question3 = $_POST['question_3'];
-        $question4 = $_POST['question_4'];
-        $question5 = $_POST['question_5'];
-        $question6 = $_POST['question_6'];
+    // Query SQL untuk menyimpan data ke dalam tabel
+    $sql = "INSERT INTO online_user (nama_lengkap, gender, hp, mail, alamat, pekerjaan, nama_organisasi, kategori) 
+                VALUES ('$fullName', '$gender', '$phoneNumber', '$email', '$alamat', '$pekerjaan', '$namaOrganisasi', '$kategori')";
 
-        // Query SQL untuk menyimpan data ke dalam tabel
-        $sql = "INSERT INTO user_chse (user_id, question_1, question_2, question_3, question_4, question_5, question_6) 
-                VALUES ('$user_id', '$question1', '$question2', '$question3', '$question4', '$question5', '$question6')";
+    // Jalankan query dan periksa apakah berhasil
+    if ($conn->query($sql) === TRUE) {
+        // Ambil user_id setelah operasi INSERT berhasil
+        $user_id = $conn->insert_id;
 
-        // Jalankan query dan periksa apakah berhasil
-        if ($conn->query($sql) === TRUE) {
-            // Redirect ke halaman lain setelah formulir disubmit
-            header("Location: payment.php?user_id=$user_id#registration"); // Ganti "sukses.php" dengan halaman tujuan
-            exit; // Pastikan tidak ada output lain sebelum redirect
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        // Redirect ke halaman lain setelah formulir disubmit
+        header("Location: online_user_payment.php?user_id=$user_id#registration"); // Ganti "sukses.php" dengan halaman tujuan
+        exit; // Pastikan tidak ada output lain sebelum redirect
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-} else {
-    echo "Error: user_id not found in URL.";
 }
 
 // Tutup koneksi ke database
 $conn->close();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +100,7 @@ $conn->close();
 
     <!-- style -->
     <link rel="stylesheet" href="../public/style/style.css">
+
     <!-- Highchart -->
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -114,6 +111,7 @@ $conn->close();
     <!-- Highchart -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="https://invest.jakarta.go.id/front\flipbook\deploy\css\flipbook.style.css" />
     <!-- flipbook-->
     <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60351c7040481b47"></script> <!-- share button -->
@@ -123,6 +121,7 @@ $conn->close();
 
     <!-- JavaScript Fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>
@@ -162,6 +161,16 @@ $conn->close();
         }
 
         @media (min-width: 768px) {
+
+            .img-responsive {
+                margin-top: -50px;
+                width: auto;
+                height: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
             .img-container {
                 text-align: center;
             }
@@ -230,6 +239,7 @@ $conn->close();
             </div>
         </div>
     </nav>
+
     <script>
         // Hide Header on on scroll down
         var didScroll;
@@ -437,104 +447,60 @@ $conn->close();
                         <div class="py-4 text-black text-center">
                             <p id="Title">Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.</p>
                         </div>
-                        <form id="registrasi" name="registrasi" method="post" action="chse.php?user_id=<?php echo $user_id; ?>">
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki kondisi kesehatan tertentu yang mungkin perlu dipertimbangkan?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_1" id="question_1" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
+                        <form id="registrasi" name="registrasi" method="post" action="online_regist.php">
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="nama_lengkap">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required />
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, kondisi kesehatan bagaimana yang perlu dipertimbangkan?</label>
-                                    <input type="text" class="form-control" id="question_2" name="question_2" placeholder="" />
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="gender">Jenis Kelamin</label>
+                                <select id="gender" name="gender" class="form-control">
+                                    <option value="" disabled selected hidden>Pilih Jenis Kelamin Anda</option>
+                                    <option>Pria</option>
+                                    <option>Wanita</option>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda saat ini sedang mengonsumsi obat untuk kondisi kesehatan Anda?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_3" id="question_3" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="hp">Nomor Telepon</label>
+                                <input type="text" class="form-control" id="hp" name="hp" required />
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah ada resep obat khusus yang perlu Anda bawa atau berikan kepada tim medis dalam situasi darurat?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_4" id="question_4" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="mail">Email</label>
+                                <input type="email" class="form-control" id="mail" name="mail" required />
+                                <div class="invalid-feedback">Invalid email</div>
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" id="fieldTitle">Apakah Anda memiliki alergi terhadap obat tertentu yang perlu diperhatikan?</label>
-                                <div class="yes-no-options">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="yes" required>
-                                        <label class="form-check-label" for="yes" id="fieldTitle">
-                                            Ya
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="question_5" id="question_5" value="no" required>
-                                        <label class="form-check-label" for="no" id="fieldTitle">
-                                            Tidak
-                                        </label>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat" required />
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <label class="font-weight-bold" id="fieldTitle">Jika ya, obat apa yang memicu alergi Anda?</label>
-                                    <input type="text" class="form-control" id="question_6" name="question_6" placeholder="" />
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="pekerjaan">Pekerjaan</label>
+                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" autocomplete="off" />
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col text-center">
-                                    <br />
-                                    <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" role="button" id="btnTitle">
-                                        Selanjutnya
-                                    </button>
-                                </div>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="nama_organisasi">Organisasi/Perusahaan/Institusi</label>
+                                <input type="text" class="form-control" id="nama_organisasi" name="nama_organisasi" autocomplete="off" />
                             </div>
-                            <div class="bg-solid-9 py-3 px-3 px-lg-5">
-                                <p style="text-align: center;" id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
+                            <div class="mb-3">
+                                <label class="font-weight-bold" id="fieldTitle" for="kategori">Kategori</label>
+                                <select id="kategori" name="kategori" class="form-control">
+                                    <option value="" disabled selected hidden>Pilih Kategori Anda</option>
+                                    <option value="onsite">Online</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn bg-solid-2 font-weight-bold px-5" id="btnTitle">Selanjutnya</button>
                             </div>
                         </form>
+                        <div class="bg-solid-9 py-3 px-5 text-center">
+                            <p id="Title"><small><strong>Kami menangani masalah privasi dengan serius. Anda dapat yakin bahwa data pribadi Anda terlindungi dengan aman.</strong></small></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- End Registration Form -->
 
     <div class="jumbotron m-0 footer-text bg-solid-2 rounded-0 py-0">
@@ -748,7 +714,28 @@ $conn->close();
             });
         });
     </script>
-    <script src="../public/js/id_eng3.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Periksa apakah parameter query string success diatur
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success') && urlParams.get('success') === 'true') {
+                // Tampilkan popup notifikasi SweetAlert2
+                Swal.fire({
+                    title: 'Congratulations! You Have Successfully Registered for this Event',
+                    icon: 'success',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    customClass: {
+                        popup: 'custom-popup-class' // Nama kelas CSS khusus untuk notifikasi
+                    }
+                });
+            }
+        });
+    </script>
+
+
+    <script src="../public/js/id_eng1.js"></script>
 </body>
 
 </html>
