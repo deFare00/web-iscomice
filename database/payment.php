@@ -214,38 +214,38 @@ $conn->close();
 
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
-    <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto menu">
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="../landing_page.php">About</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#schedule">Schedule</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
-          </li>
-          <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
-            <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
-              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+        <div class="container">
+            <a class="navbar-brand logo" href="../index.php"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu">
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="../index.php">About</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="database/registration_type.php">Registration</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="#speakers">Speakers</a>
+                    </li>
+                    <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+                            <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        </div>
+    </nav>
   <script>
     // Hide Header on on scroll down
     var didScroll;
@@ -518,7 +518,7 @@ $conn->close();
               Register
             </div>
             <div class="py-1">
-              <small><a class="" href="../how_to.php">How to Register</a></small>
+                <small><a class="" href="../how_to.php">How to Register</a></small>
             </div>
             <div class="py-1">
               <small><a class="" href="#exhibition2">Food and Allergy Form</a></small>

@@ -688,7 +688,7 @@
           <div class="row justify-content-center">
             <div class="col justify-content-center d-flex align-items-center">
               <div class="d-flex align-items-center p-4">
-                <img src="assets/all_sponsor.png" class="img-fluid" style="max-height: 500px; object-fit: contain" />
+                <!--<img src="assets/all_sponsor.png" class="img-fluid" style="max-height: 500px; object-fit: contain" />-->
               </div>
             </div>
           </div>

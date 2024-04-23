@@ -1,13 +1,15 @@
 function translateTo(language) {
     // Get all elements that contain text you want to translate
-    const elementsToTranslate = document.querySelectorAll('#registration h2, #registration p, #registration label, #registration option, #registration button');
+    const elementsToTranslate = document.querySelectorAll('li, #registration h2, #registration p, #registration label, #registration option, #registration button');
     
     // Example translation mappings
     const translations = {
       'id': {
         'Registration': 'Registrasi',
         'Fill in the registration data. It will take a couple of minutes.': 'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.',
-        'Full Name': 'Nama Lengkap',
+        'Please select the category you want first.': 'Silahkan pilih terlebih dahulu kategori yang anda inginkan.',
+        'Category': 'Kategori',
+        'Select your Category': 'Pilih Kategori Anda',
         'Gender': 'Jenis Kelamin',
         'Select Your Gender': 'Pilih Jenis Kelamin Anda',
         'Male': 'Pria',
@@ -24,6 +26,9 @@ function translateTo(language) {
       'en': {
         'Registrasi': 'Registration',
         'Isi detail pendaftaran Anda. Ini akan membutuhkan waktu beberapa menit.': 'Fill in the registration data. It will take a couple of minutes.',
+        'Silahkan pilih terlebih dahulu kategori yang anda inginkan.': 'Please select the category you want first.',
+        'Kategori': 'Category',
+        'Pilih Kategori Anda': 'Select your Category',
         'Nama Lengkap': 'Full Name',
         'Jenis Kelamin': 'Gender',
         'Pilih Jenis Kelamin Anda': 'Select Your Gender',

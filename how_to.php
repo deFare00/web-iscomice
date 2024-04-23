@@ -259,38 +259,38 @@
 
 <body>
   <nav class="navbar navbar-expand-lg text-white fixed-top">
-    <div class="container">
-      <a class="navbar-brand logo" href="#top"><img src="assets/IMG_5581.PNG" height="40" alt="" /></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><img src="assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto menu">
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="landing_page.php">About</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#schedule">Schedule</a>
-          </li>
-          <li class="nav-item hover-line active text-capitalize text-lg-center">
-            <a class="nav-link px-md-3" href="#speakers">Speakers</a>
-          </li>
-          <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
-            <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
-              <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="assets/united-states.png" alt="EN flag" width="20"> English</a>
+        <div class="container">
+            <a class="navbar-brand logo" href="index.php"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu">
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="index.php">About</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="database/registration_type.php">Registration</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link px-md-3" href="#speakers">Speakers</a>
+                    </li>
+                    <li class="nav-item dropdown hover-line active text-capitalize text-lg-center">
+                        <a class="nav-link dropdown-toggle px-md-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="translateTo('id')"><img src="../assets/indonesia.png" alt="ID flag" width="20"> Bahasa Indonesia </a>
+                            <a class="dropdown-item" href="#" onclick="translateTo('en')"><img src="../assets/united-states.png" alt="EN flag" width="20"> English</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        </div>
+    </nav>
   <script>
     // Hide Header on on scroll down
     var didScroll;
@@ -448,7 +448,7 @@
   <div id="about" class="container py-5">
     <div class="row justify-content-center pt-5">
       <div class="col-sm-10">
-        <h1 style="text-align: center;">Tata Cara</h1>
+        <h1 style="text-align: center;" id="aboutTitle">Tata Cara Pendaftaran</h1>
         <hr>
         <div class="row">
           <div class="col-md-2"></div>
@@ -458,35 +458,32 @@
             <div class="row">
               <div class="col-md-12">
                 <ul class="main-list">
-                  <li>Membuka website <a href="https://inamice.id/" style>inamice.id</a></li>
-                  <li>Klik garis tiga di kanan atas</li>
-                  <li>Klik section "Registration"</li>
-                  <li>Memilih jenis attendance
+                  <li id="aboutTitle">Membuka website inamice.id</a></li>
+                  <li id="aboutTitle">Klik garis tiga di kanan atas</li>
+                  <li id="Title">Klik bagian "Registration"</li>
+                  <li id="aboutTitle">Memilih jenis kehadiran</li>
                     <ul class="sub-list" style="list-style: disc;">
-                      <li>Note</li>
+                      <li id="aboutTitle">Notes</li>
                       <li style="list-style: none;">Peserta dapat hadir secara Onsite dan Online</li>
                     </ul>
-                  </li>
-                  <li>Ketika peserta memilih Onsite maka akan dilanjutkan dengan proses pengisian data diantaranya:
+                  <li id="aboutTitle">Ketika peserta memilih Onsite maka akan dilanjutkan dengan proses pengisian data diantaranya :</li>
                     <ul class="sub-list" style="list-style:decimal;">
-                      <li>Mengisi data diri</li>
-                      <li>Mengisi data CHSE</li>
-                      <li>Pilih metode pembayaran</li>
-                      <li>Unggah bukti pembayaran</li>
-                      <li>Klik “daftar"</li>
-                      <li>Mendapatkan confirmation email.</li>
+                      <li id="aboutTitle">Mengisi data diri</li>
+                      <li id="aboutTitle">Mengisi data CHSE</li>
+                      <li id="aboutTitle">Pilih metode pembayaran</li>
+                      <li id="aboutTitle">Unggah bukti pembayaran</li>
+                      <li id="aboutTitle">Klik "daftar"</li>
+                      <li id="aboutTitle">Mendapatkan konfirmasi email.</li>
                     </ul>
-                  </li>
-                  <li>Untuk peserta yang memiliki jenis attendance Online, maka akan dilanjutkan dengan proses pengisian data diantaranya:
+                  <li id="aboutTitle">Untuk peserta yang memiliki jenis attendance Online, maka akan dilanjutkan dengan proses pengisian data diantaranya :</li>
                     <ul class="sub-list" style="list-style:decimal;">
-                      <li>Mengisi data diri</li>
-                      <li>Pilih metode pembayaran</li>
-                      <li>Unggah bukti pembayaran</li>
-                      <li>Klik “daftar"</li>
-                      <li>Mendapatkan confirmation email.</li>
-                      <li>Zoom meeting akan diberikan H-7 acara INAMICE.</li>
+                      <li id="aboutTitle">Mengisi data diri</li>
+                      <li id="aboutTitle">Pilih metode pembayaran</li>
+                      <li id="aboutTitle">Unggah bukti pembayaran</li>
+                      <li id="aboutTitle">Klik "daftar"</li>
+                      <li id="aboutTitle">Mendapatkan konfirmasi email.</li>
+                      <li id="aboutTitle">Zoom meeting akan diberikan H-7 acara INAMICE.</li>
                     </ul>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -588,6 +585,7 @@
       </footer>
     </div>
   </div>
+  
   <script type="text/javascript">
     $(document).ready(function() {
       $(".exhibiz").owlCarousel({
@@ -1035,7 +1033,7 @@
     });
   </script>
 
-  <script src="public/js/id_eng.js"></script>
+  <script src="public/js/id_eng5.js"></script>
 </body>
 
 </html>

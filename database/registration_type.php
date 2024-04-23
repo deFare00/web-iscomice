@@ -211,17 +211,17 @@ $conn->close();
 <body>
     <nav class="navbar navbar-expand-lg text-white fixed-top">
         <div class="container">
-            <a class="navbar-brand logo" href="#top"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
+            <a class="navbar-brand logo" href="../index.php"><img src="../assets/IMG_5581.PNG" height="40" alt="" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><img src="../assets/elements/burger-menu-svgrepo-com.svg" alt="" width="30px" height="30px"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto menu">
                     <li class="nav-item hover-line active text-capitalize text-lg-center">
-                        <a class="nav-link px-md-3" href="../landing_page.php">About</a>
+                        <a class="nav-link px-md-3" href="../index.php">About</a>
                     </li>
                     <li class="nav-item hover-line active text-capitalize text-lg-center">
-                        <a class="nav-link px-md-3" href="database/registration.php">Registration</a>
+                        <a class="nav-link px-md-3" href="database/registration_type.php">Registration</a>
                     </li>
                     <li class="nav-item hover-line active text-capitalize text-lg-center">
                         <a class="nav-link px-md-3" href="#schedule">Schedule</a>
@@ -433,7 +433,7 @@ $conn->close();
             <div class="col-md-10">
                 <div class="row align-items-center mb-4">
                     <div class="col-md-3 col-6 d-flex align-items-center">
-                        <h2 class="title-3 text-dark font-weight-bold" id="Title">Registration</h2>
+                        <h2 class="title-3 text-dark font-weight-bold" id="Title">Registrasi</h2>
                         <img class="img-fluid ml-2" src="../assets/elements/small_iconTittle_2.png" style="border-radius: 8px 0 8px 0; width: 30px; transform: rotate(90deg)" />
                     </div>
                 </div>
